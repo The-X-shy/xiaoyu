@@ -1,0 +1,34 @@
+FULL EVALUATION: 20 repeats, 7 restarts, 400 iter
+Logs saved to: outputs/logs/full_eval_20260221_232718.log
+   PV   BL_SR  ASM_SR   BL_RMSE  ASM_RMSE    ASM_T    BL   ASM
+-----------------------------------------------------------------
+  0.5    1.00    1.00    0.0009    0.0009      0.1  PASS  PASS
+  1.0    1.00    1.00    0.0009    0.0009      0.1  PASS  PASS
+  2.0    1.00    1.00    0.0009    0.0009      0.1  PASS  PASS
+  3.0    1.00    1.00    0.0019    0.0019      0.1  PASS  PASS
+  5.0    1.00    0.95    0.0064    0.0034      5.1  PASS  PASS
+  7.0    1.00    1.00    0.0192    0.0044      5.0  PASS  PASS
+ 10.0    0.95    1.00    0.0161    0.0067      7.6  PASS  PASS
+ 12.0    0.90    1.00    0.0289    0.0046     11.6  FAIL  PASS
+ 15.0    0.55    1.00    0.0401    0.0034     11.2  FAIL  PASS
+ 18.0    0.30    0.95    0.0617    0.0021     14.8  FAIL  PASS
+ 20.0    0.10    0.95    0.0302    0.0033     20.7  FAIL  PASS
+ 25.0    0.00    1.00       nan    0.0042     20.0  FAIL  PASS
+ 30.0    0.00    0.95       nan    0.0053     28.0  FAIL  PASS
+ 35.0    0.00    0.95       nan    0.0061     37.9  FAIL  PASS
+ 40.0    0.00    1.00       nan    0.0014     32.9  FAIL  PASS
+
+=================================================================
+Baseline DR: 10.0
+ASM DR:      40.0
+Gain:        4.00x
+Target:      >= 14.0x
+Result:      FAIL
+
+Conventional max slope: 14.42 mrad
+ASM max slope at DR PV=40.0: 422.41 mrad
+Slope ratio (paper metric): 29.29x
+Paper reported: 14.81x
+
+Saved raw results to outputs/tables/full_eval_baseline_20260221_232718.csv and full_eval_asm_20260221_232718.csv
+Saved summary to outputs/tables/full_eval_summary_20260221_232718.csv
