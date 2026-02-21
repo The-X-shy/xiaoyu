@@ -1,0 +1,292 @@
+START_GPU_V3 Wed Feb 11 21:32:20 CST 2026
+Baseline PV=0.5: success_rate=1.00
+Baseline PV=1.0: success_rate=1.00
+Baseline PV=1.5: success_rate=1.00
+Baseline PV=2.0: success_rate=0.90
+Baseline PV=2.5: success_rate=0.65
+Baseline PV=3.0: success_rate=0.35
+Baseline PV=3.5: success_rate=0.05
+Baseline PV=4.0: success_rate=0.00
+Baseline PV=4.5: success_rate=0.00
+Baseline PV=5.0: success_rate=0.00
+Baseline PV=5.5: success_rate=0.00
+Baseline PV=6.0: success_rate=0.00
+Baseline PV=6.5: success_rate=0.00
+Baseline PV=7.0: success_rate=0.00
+Baseline PV=7.5: success_rate=0.00
+Baseline PV=8.0: success_rate=0.00
+Baseline PV=8.5: success_rate=0.00
+Baseline PV=9.0: success_rate=0.00
+Baseline PV=9.5: success_rate=0.00
+Baseline PV=10.0: success_rate=0.00
+Baseline PV=10.5: success_rate=0.00
+Baseline PV=11.0: success_rate=0.00
+Baseline PV=11.5: success_rate=0.00
+Baseline PV=12.0: success_rate=0.00
+Baseline PV=12.5: success_rate=0.00
+Baseline PV=13.0: success_rate=0.00
+Baseline PV=13.5: success_rate=0.00
+Baseline PV=14.0: success_rate=0.00
+Baseline PV=14.5: success_rate=0.00
+Baseline PV=15.0: success_rate=0.00
+Baseline PV=15.5: success_rate=0.00
+Baseline PV=16.0: success_rate=0.00
+Baseline PV=16.5: success_rate=0.00
+Baseline PV=17.0: success_rate=0.00
+Baseline PV=17.5: success_rate=0.00
+Baseline PV=18.0: success_rate=0.00
+Baseline PV=18.5: success_rate=0.00
+Baseline PV=19.0: success_rate=0.00
+Baseline PV=19.5: success_rate=0.00
+Baseline PV=20.0: success_rate=0.00
+Baseline PV=20.5: success_rate=0.00
+Baseline PV=21.0: success_rate=0.00
+Baseline PV=21.5: success_rate=0.00
+Baseline PV=22.0: success_rate=0.00
+Baseline PV=22.5: success_rate=0.00
+Baseline PV=23.0: success_rate=0.00
+Baseline PV=23.5: success_rate=0.00
+Baseline PV=24.0: success_rate=0.00
+Baseline PV=24.5: success_rate=0.00
+Baseline PV=25.0: success_rate=0.00
+Baseline PV=25.5: success_rate=0.00
+Baseline PV=26.0: success_rate=0.00
+Baseline PV=26.5: success_rate=0.00
+Baseline PV=27.0: success_rate=0.00
+Baseline PV=27.5: success_rate=0.00
+Baseline PV=28.0: success_rate=0.00
+Baseline PV=28.5: success_rate=0.00
+Baseline PV=29.0: success_rate=0.00
+Baseline PV=29.5: success_rate=0.00
+Baseline PV=30.0: success_rate=0.00
+Saved 1200 results to outputs/tables/dynamic_range_baseline_results.csv
+[1/1200] PV=0.5 seed=20260210 OK rmse=0.0000 3.1s (ETA 61.5min)
+[2/1200] PV=0.5 seed=20260211 OK rmse=0.0000 2.6s (ETA 56.7min)
+[3/1200] PV=0.5 seed=20260212 OK rmse=0.0000 2.6s (ETA 55.2min)
+[4/1200] PV=0.5 seed=20260213 OK rmse=0.0000 2.6s (ETA 54.3min)
+[5/1200] PV=0.5 seed=20260214 OK rmse=0.0000 2.6s (ETA 53.7min)
+[6/1200] PV=0.5 seed=20260215 OK rmse=0.0000 2.6s (ETA 53.4min)
+[7/1200] PV=0.5 seed=20260216 OK rmse=0.0000 2.7s (ETA 53.4min)
+[8/1200] PV=0.5 seed=20260217 OK rmse=0.0000 2.6s (ETA 53.2min)
+[9/1200] PV=0.5 seed=20260218 OK rmse=0.0000 2.6s (ETA 53.0min)
+[10/1200] PV=0.5 seed=20260219 OK rmse=0.0000 2.6s (ETA 52.8min)
+[11/1200] PV=0.5 seed=20260220 OK rmse=0.0000 2.6s (ETA 52.6min)
+[12/1200] PV=0.5 seed=20260221 OK rmse=0.0000 2.6s (ETA 52.4min)
+[13/1200] PV=0.5 seed=20260222 OK rmse=0.0000 2.6s (ETA 52.2min)
+[14/1200] PV=0.5 seed=20260223 OK rmse=0.0000 2.7s (ETA 52.3min)
+[15/1200] PV=0.5 seed=20260224 OK rmse=0.0000 2.6s (ETA 52.3min)
+[16/1200] PV=0.5 seed=20260225 OK rmse=0.0000 2.6s (ETA 52.2min)
+[17/1200] PV=0.5 seed=20260226 OK rmse=0.0000 2.6s (ETA 52.1min)
+[18/1200] PV=0.5 seed=20260227 OK rmse=0.0000 2.6s (ETA 52.0min)
+[19/1200] PV=0.5 seed=20260228 OK rmse=0.0000 2.6s (ETA 52.0min)
+[20/1200] PV=0.5 seed=20260229 OK rmse=0.0000 2.6s (ETA 51.9min)
+[21/1200] PV=1.0 seed=20260210 OK rmse=0.0000 2.7s (ETA 51.9min)
+[22/1200] PV=1.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 51.8min)
+[23/1200] PV=1.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 51.7min)
+[24/1200] PV=1.0 seed=20260213 OK rmse=0.0000 2.6s (ETA 51.7min)
+[25/1200] PV=1.0 seed=20260214 OK rmse=0.0000 2.6s (ETA 51.6min)
+[26/1200] PV=1.0 seed=20260215 OK rmse=0.0000 2.6s (ETA 51.5min)
+[27/1200] PV=1.0 seed=20260216 OK rmse=0.0000 2.6s (ETA 51.4min)
+[28/1200] PV=1.0 seed=20260217 OK rmse=0.0000 2.6s (ETA 51.3min)
+[29/1200] PV=1.0 seed=20260218 OK rmse=0.0000 2.7s (ETA 51.4min)
+[30/1200] PV=1.0 seed=20260219 OK rmse=0.0000 2.6s (ETA 51.3min)
+[31/1200] PV=1.0 seed=20260220 OK rmse=0.0000 2.6s (ETA 51.2min)
+[32/1200] PV=1.0 seed=20260221 OK rmse=0.0000 2.6s (ETA 51.2min)
+[33/1200] PV=1.0 seed=20260222 OK rmse=0.0000 2.6s (ETA 51.1min)
+[34/1200] PV=1.0 seed=20260223 OK rmse=0.0000 2.6s (ETA 51.0min)
+[35/1200] PV=1.0 seed=20260224 OK rmse=0.0000 2.6s (ETA 51.0min)
+[36/1200] PV=1.0 seed=20260225 OK rmse=0.0000 2.7s (ETA 51.0min)
+[37/1200] PV=1.0 seed=20260226 OK rmse=0.0000 2.6s (ETA 50.9min)
+[38/1200] PV=1.0 seed=20260227 OK rmse=0.0000 2.6s (ETA 50.8min)
+[39/1200] PV=1.0 seed=20260228 OK rmse=0.0000 2.6s (ETA 50.8min)
+[40/1200] PV=1.0 seed=20260229 OK rmse=0.0000 2.6s (ETA 50.7min)
+[41/1200] PV=1.5 seed=20260210 OK rmse=0.0000 2.6s (ETA 50.6min)
+[42/1200] PV=1.5 seed=20260211 OK rmse=0.0000 2.6s (ETA 50.6min)
+[43/1200] PV=1.5 seed=20260212 OK rmse=0.0000 2.6s (ETA 50.5min)
+[44/1200] PV=1.5 seed=20260213 OK rmse=0.0000 2.7s (ETA 50.5min)
+[45/1200] PV=1.5 seed=20260214 OK rmse=0.0000 2.6s (ETA 50.5min)
+[46/1200] PV=1.5 seed=20260215 OK rmse=0.0000 2.6s (ETA 50.5min)
+[47/1200] PV=1.5 seed=20260216 OK rmse=0.0000 2.6s (ETA 50.4min)
+[48/1200] PV=1.5 seed=20260217 OK rmse=0.0000 2.7s (ETA 50.4min)
+[49/1200] PV=1.5 seed=20260218 OK rmse=0.0000 2.6s (ETA 50.3min)
+[50/1200] PV=1.5 seed=20260219 OK rmse=0.0000 2.7s (ETA 50.3min)
+[51/1200] PV=1.5 seed=20260220 OK rmse=0.0000 2.7s (ETA 50.3min)
+[52/1200] PV=1.5 seed=20260221 OK rmse=0.0000 2.6s (ETA 50.3min)
+[53/1200] PV=1.5 seed=20260222 OK rmse=0.0000 2.6s (ETA 50.2min)
+[54/1200] PV=1.5 seed=20260223 OK rmse=0.0000 2.6s (ETA 50.1min)
+[55/1200] PV=1.5 seed=20260224 OK rmse=0.0000 2.6s (ETA 50.1min)
+[56/1200] PV=1.5 seed=20260225 OK rmse=0.0000 2.6s (ETA 50.0min)
+[57/1200] PV=1.5 seed=20260226 OK rmse=0.0000 2.6s (ETA 50.0min)
+[58/1200] PV=1.5 seed=20260227 OK rmse=0.0000 2.7s (ETA 50.0min)
+[59/1200] PV=1.5 seed=20260228 OK rmse=0.0000 2.6s (ETA 49.9min)
+[60/1200] PV=1.5 seed=20260229 OK rmse=0.0000 2.6s (ETA 49.9min)
+[61/1200] PV=2.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 49.8min)
+[62/1200] PV=2.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 49.8min)
+[63/1200] PV=2.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 49.7min)
+[64/1200] PV=2.0 seed=20260213 OK rmse=0.0000 2.6s (ETA 49.7min)
+[65/1200] PV=2.0 seed=20260214 OK rmse=0.0000 2.6s (ETA 49.6min)
+[66/1200] PV=2.0 seed=20260215 OK rmse=0.0000 2.7s (ETA 49.6min)
+[67/1200] PV=2.0 seed=20260216 OK rmse=0.0000 2.6s (ETA 49.6min)
+[68/1200] PV=2.0 seed=20260217 OK rmse=0.0000 2.6s (ETA 49.5min)
+[69/1200] PV=2.0 seed=20260218 OK rmse=0.0000 2.6s (ETA 49.5min)
+[70/1200] PV=2.0 seed=20260219 OK rmse=0.0000 2.6s (ETA 49.4min)
+[71/1200] PV=2.0 seed=20260220 OK rmse=0.0000 2.6s (ETA 49.4min)
+[72/1200] PV=2.0 seed=20260221 OK rmse=0.0000 2.6s (ETA 49.3min)
+[73/1200] PV=2.0 seed=20260222 OK rmse=0.0000 2.7s (ETA 49.3min)
+[74/1200] PV=2.0 seed=20260223 OK rmse=0.0000 2.6s (ETA 49.3min)
+[75/1200] PV=2.0 seed=20260224 OK rmse=0.0000 2.6s (ETA 49.2min)
+[76/1200] PV=2.0 seed=20260225 OK rmse=0.0000 2.6s (ETA 49.2min)
+[77/1200] PV=2.0 seed=20260226 OK rmse=0.0000 2.6s (ETA 49.1min)
+[78/1200] PV=2.0 seed=20260227 OK rmse=0.0000 2.6s (ETA 49.1min)
+[79/1200] PV=2.0 seed=20260228 OK rmse=0.0000 2.6s (ETA 49.0min)
+[80/1200] PV=2.0 seed=20260229 OK rmse=0.0000 2.7s (ETA 49.0min)
+[81/1200] PV=2.5 seed=20260210 OK rmse=0.0000 2.6s (ETA 49.0min)
+[82/1200] PV=2.5 seed=20260211 OK rmse=0.0000 2.6s (ETA 48.9min)
+[83/1200] PV=2.5 seed=20260212 OK rmse=0.0000 2.6s (ETA 48.8min)
+[84/1200] PV=2.5 seed=20260213 OK rmse=0.0000 2.6s (ETA 48.8min)
+[85/1200] PV=2.5 seed=20260214 OK rmse=0.0000 2.6s (ETA 48.7min)
+[86/1200] PV=2.5 seed=20260215 OK rmse=0.0000 2.6s (ETA 48.7min)
+[87/1200] PV=2.5 seed=20260216 OK rmse=0.0000 2.7s (ETA 48.7min)
+[88/1200] PV=2.5 seed=20260217 OK rmse=0.0000 2.8s (ETA 48.6min)
+[89/1200] PV=2.5 seed=20260218 OK rmse=0.0000 2.6s (ETA 48.6min)
+[90/1200] PV=2.5 seed=20260219 OK rmse=0.0000 2.6s (ETA 48.6min)
+[91/1200] PV=2.5 seed=20260220 OK rmse=0.0000 2.6s (ETA 48.5min)
+[92/1200] PV=2.5 seed=20260221 OK rmse=0.0000 2.6s (ETA 48.5min)
+[93/1200] PV=2.5 seed=20260222 OK rmse=0.0000 2.6s (ETA 48.4min)
+[94/1200] PV=2.5 seed=20260223 OK rmse=0.0000 2.6s (ETA 48.3min)
+[95/1200] PV=2.5 seed=20260224 OK rmse=0.0000 2.7s (ETA 48.3min)
+[96/1200] PV=2.5 seed=20260225 OK rmse=0.0000 2.6s (ETA 48.3min)
+[97/1200] PV=2.5 seed=20260226 OK rmse=0.0000 2.6s (ETA 48.2min)
+[98/1200] PV=2.5 seed=20260227 OK rmse=0.0000 2.6s (ETA 48.2min)
+[99/1200] PV=2.5 seed=20260228 OK rmse=0.0000 2.6s (ETA 48.1min)
+[100/1200] PV=2.5 seed=20260229 OK rmse=0.0000 2.6s (ETA 48.1min)
+[101/1200] PV=3.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 48.0min)
+[102/1200] PV=3.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 48.0min)
+[103/1200] PV=3.0 seed=20260212 OK rmse=0.0000 2.7s (ETA 47.9min)
+[104/1200] PV=3.0 seed=20260213 OK rmse=0.0000 2.6s (ETA 47.9min)
+[105/1200] PV=3.0 seed=20260214 OK rmse=0.0000 2.6s (ETA 47.8min)
+[106/1200] PV=3.0 seed=20260215 OK rmse=0.0000 2.6s (ETA 47.8min)
+[107/1200] PV=3.0 seed=20260216 OK rmse=0.0000 2.6s (ETA 47.7min)
+[108/1200] PV=3.0 seed=20260217 OK rmse=0.0000 2.6s (ETA 47.7min)
+[109/1200] PV=3.0 seed=20260218 OK rmse=0.0000 2.6s (ETA 47.6min)
+[110/1200] PV=3.0 seed=20260219 OK rmse=0.0000 2.7s (ETA 47.6min)
+[111/1200] PV=3.0 seed=20260220 OK rmse=0.0000 2.6s (ETA 47.6min)
+[112/1200] PV=3.0 seed=20260221 OK rmse=0.0000 2.6s (ETA 47.5min)
+[113/1200] PV=3.0 seed=20260222 OK rmse=0.0000 2.6s (ETA 47.5min)
+[114/1200] PV=3.0 seed=20260223 OK rmse=0.0000 2.6s (ETA 47.4min)
+[115/1200] PV=3.0 seed=20260224 OK rmse=0.0000 2.6s (ETA 47.4min)
+[116/1200] PV=3.0 seed=20260225 OK rmse=0.0000 2.6s (ETA 47.3min)
+[117/1200] PV=3.0 seed=20260226 OK rmse=0.0000 2.7s (ETA 47.3min)
+[118/1200] PV=3.0 seed=20260227 OK rmse=0.0000 2.6s (ETA 47.2min)
+[119/1200] PV=3.0 seed=20260228 OK rmse=0.0000 2.6s (ETA 47.2min)
+[120/1200] PV=3.0 seed=20260229 OK rmse=0.0000 2.6s (ETA 47.1min)
+[121/1200] PV=3.5 seed=20260210 OK rmse=0.0000 2.6s (ETA 47.1min)
+[122/1200] PV=3.5 seed=20260211 OK rmse=0.0000 2.6s (ETA 47.0min)
+[123/1200] PV=3.5 seed=20260212 OK rmse=0.0000 2.6s (ETA 47.0min)
+[124/1200] PV=3.5 seed=20260213 OK rmse=0.0000 2.6s (ETA 46.9min)
+[125/1200] PV=3.5 seed=20260214 OK rmse=0.0000 2.7s (ETA 46.9min)
+[126/1200] PV=3.5 seed=20260215 OK rmse=0.0000 2.6s (ETA 46.9min)
+[127/1200] PV=3.5 seed=20260216 OK rmse=0.0000 2.6s (ETA 46.8min)
+[128/1200] PV=3.5 seed=20260217 OK rmse=0.0000 2.6s (ETA 46.8min)
+[129/1200] PV=3.5 seed=20260218 OK rmse=0.0000 2.6s (ETA 46.7min)
+[130/1200] PV=3.5 seed=20260219 OK rmse=0.0000 2.6s (ETA 46.7min)
+[131/1200] PV=3.5 seed=20260220 OK rmse=0.0000 2.6s (ETA 46.6min)
+[132/1200] PV=3.5 seed=20260221 OK rmse=0.0000 2.7s (ETA 46.6min)
+[133/1200] PV=3.5 seed=20260222 OK rmse=0.0000 2.6s (ETA 46.6min)
+[134/1200] PV=3.5 seed=20260223 OK rmse=0.0000 2.6s (ETA 46.5min)
+[135/1200] PV=3.5 seed=20260224 OK rmse=0.0000 2.6s (ETA 46.5min)
+[136/1200] PV=3.5 seed=20260225 OK rmse=0.0000 2.6s (ETA 46.4min)
+[137/1200] PV=3.5 seed=20260226 OK rmse=0.0000 2.6s (ETA 46.4min)
+[138/1200] PV=3.5 seed=20260227 OK rmse=0.0000 2.6s (ETA 46.3min)
+[139/1200] PV=3.5 seed=20260228 OK rmse=0.0000 2.7s (ETA 46.3min)
+[140/1200] PV=3.5 seed=20260229 OK rmse=0.0000 2.7s (ETA 46.3min)
+[141/1200] PV=4.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 46.2min)
+[142/1200] PV=4.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 46.2min)
+[143/1200] PV=4.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 46.1min)
+[144/1200] PV=4.0 seed=20260213 OK rmse=0.0000 2.6s (ETA 46.1min)
+[145/1200] PV=4.0 seed=20260214 OK rmse=0.0000 2.6s (ETA 46.0min)
+[146/1200] PV=4.0 seed=20260215 OK rmse=0.0000 2.6s (ETA 46.0min)
+[147/1200] PV=4.0 seed=20260216 OK rmse=0.0000 2.6s (ETA 46.0min)
+[148/1200] PV=4.0 seed=20260217 OK rmse=0.0000 2.7s (ETA 45.9min)
+[149/1200] PV=4.0 seed=20260218 OK rmse=0.0000 2.6s (ETA 45.9min)
+[150/1200] PV=4.0 seed=20260219 OK rmse=0.0000 2.6s (ETA 45.8min)
+[151/1200] PV=4.0 seed=20260220 OK rmse=0.0000 2.6s (ETA 45.8min)
+[152/1200] PV=4.0 seed=20260221 OK rmse=0.0000 2.6s (ETA 45.7min)
+[153/1200] PV=4.0 seed=20260222 OK rmse=0.0000 2.6s (ETA 45.7min)
+[154/1200] PV=4.0 seed=20260223 OK rmse=0.0000 2.6s (ETA 45.6min)
+[155/1200] PV=4.0 seed=20260224 OK rmse=0.0000 2.7s (ETA 45.6min)
+[156/1200] PV=4.0 seed=20260225 OK rmse=0.0000 2.6s (ETA 45.6min)
+[157/1200] PV=4.0 seed=20260226 OK rmse=0.0000 2.6s (ETA 45.5min)
+[158/1200] PV=4.0 seed=20260227 OK rmse=0.0000 2.6s (ETA 45.5min)
+[159/1200] PV=4.0 seed=20260228 OK rmse=0.0000 2.6s (ETA 45.4min)
+[160/1200] PV=4.0 seed=20260229 OK rmse=0.0000 2.6s (ETA 45.4min)
+[161/1200] PV=4.5 seed=20260210 OK rmse=0.0000 2.6s (ETA 45.3min)
+[162/1200] PV=4.5 seed=20260211 OK rmse=0.0000 2.7s (ETA 45.3min)
+[163/1200] PV=4.5 seed=20260212 OK rmse=0.0000 2.6s (ETA 45.2min)
+[164/1200] PV=4.5 seed=20260213 OK rmse=0.0000 2.6s (ETA 45.2min)
+[165/1200] PV=4.5 seed=20260214 OK rmse=0.0000 2.6s (ETA 45.1min)
+[166/1200] PV=4.5 seed=20260215 OK rmse=0.0000 2.6s (ETA 45.1min)
+[167/1200] PV=4.5 seed=20260216 OK rmse=0.0000 2.6s (ETA 45.1min)
+[168/1200] PV=4.5 seed=20260217 OK rmse=0.0000 2.6s (ETA 45.0min)
+[169/1200] PV=4.5 seed=20260218 OK rmse=0.0000 2.6s (ETA 45.0min)
+[170/1200] PV=4.5 seed=20260219 OK rmse=0.0000 2.7s (ETA 44.9min)
+[171/1200] PV=4.5 seed=20260220 OK rmse=0.0000 2.6s (ETA 44.9min)
+[172/1200] PV=4.5 seed=20260221 OK rmse=0.0000 2.6s (ETA 44.8min)
+[173/1200] PV=4.5 seed=20260222 OK rmse=0.0000 2.6s (ETA 44.8min)
+[174/1200] PV=4.5 seed=20260223 OK rmse=0.0000 2.6s (ETA 44.8min)
+[175/1200] PV=4.5 seed=20260224 OK rmse=0.0000 2.6s (ETA 44.7min)
+[176/1200] PV=4.5 seed=20260225 OK rmse=0.0000 2.6s (ETA 44.7min)
+[177/1200] PV=4.5 seed=20260226 OK rmse=0.0000 2.7s (ETA 44.6min)
+[178/1200] PV=4.5 seed=20260227 OK rmse=0.0000 2.6s (ETA 44.6min)
+[179/1200] PV=4.5 seed=20260228 OK rmse=0.0000 2.6s (ETA 44.5min)
+[180/1200] PV=4.5 seed=20260229 OK rmse=0.0000 2.6s (ETA 44.5min)
+[181/1200] PV=5.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 44.5min)
+[182/1200] PV=5.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 44.4min)
+[183/1200] PV=5.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 44.4min)
+[184/1200] PV=5.0 seed=20260213 OK rmse=0.0000 2.6s (ETA 44.3min)
+[185/1200] PV=5.0 seed=20260214 OK rmse=0.0000 2.7s (ETA 44.3min)
+[186/1200] PV=5.0 seed=20260215 OK rmse=0.0000 2.6s (ETA 44.2min)
+[187/1200] PV=5.0 seed=20260216 OK rmse=0.0000 2.7s (ETA 44.2min)
+[188/1200] PV=5.0 seed=20260217 OK rmse=0.0000 2.7s (ETA 44.2min)
+[189/1200] PV=5.0 seed=20260218 OK rmse=0.0000 2.7s (ETA 44.1min)
+[190/1200] PV=5.0 seed=20260219 OK rmse=0.0000 2.7s (ETA 44.1min)
+[191/1200] PV=5.0 seed=20260220 OK rmse=0.0000 2.6s (ETA 44.0min)
+[192/1200] PV=5.0 seed=20260221 OK rmse=0.0000 2.6s (ETA 44.0min)
+[193/1200] PV=5.0 seed=20260222 OK rmse=0.0000 2.7s (ETA 44.0min)
+[194/1200] PV=5.0 seed=20260223 OK rmse=0.0000 2.6s (ETA 43.9min)
+[195/1200] PV=5.0 seed=20260224 OK rmse=0.0000 2.6s (ETA 43.9min)
+[196/1200] PV=5.0 seed=20260225 OK rmse=0.0000 2.6s (ETA 43.8min)
+[197/1200] PV=5.0 seed=20260226 OK rmse=0.0000 2.6s (ETA 43.8min)
+[198/1200] PV=5.0 seed=20260227 OK rmse=0.0000 2.6s (ETA 43.7min)
+[199/1200] PV=5.0 seed=20260228 OK rmse=0.0000 2.6s (ETA 43.7min)
+[200/1200] PV=5.0 seed=20260229 OK rmse=0.0000 2.7s (ETA 43.7min)
+[201/1200] PV=5.5 seed=20260210 OK rmse=0.0000 2.6s (ETA 43.6min)
+[202/1200] PV=5.5 seed=20260211 OK rmse=0.0000 2.6s (ETA 43.6min)
+[203/1200] PV=5.5 seed=20260212 OK rmse=0.0000 2.6s (ETA 43.5min)
+[204/1200] PV=5.5 seed=20260213 OK rmse=0.0000 2.6s (ETA 43.5min)
+[205/1200] PV=5.5 seed=20260214 OK rmse=0.0000 2.6s (ETA 43.4min)
+[206/1200] PV=5.5 seed=20260215 OK rmse=0.0000 2.7s (ETA 43.4min)
+[207/1200] PV=5.5 seed=20260216 OK rmse=0.0000 2.7s (ETA 43.4min)
+[208/1200] PV=5.5 seed=20260217 OK rmse=0.0000 2.6s (ETA 43.3min)
+[209/1200] PV=5.5 seed=20260218 OK rmse=0.0000 2.6s (ETA 43.3min)
+[210/1200] PV=5.5 seed=20260219 OK rmse=0.0000 2.6s (ETA 43.2min)
+[211/1200] PV=5.5 seed=20260220 OK rmse=0.0000 2.6s (ETA 43.2min)
+[212/1200] PV=5.5 seed=20260221 OK rmse=0.0000 2.6s (ETA 43.1min)
+[213/1200] PV=5.5 seed=20260222 OK rmse=0.0000 2.6s (ETA 43.1min)
+[214/1200] PV=5.5 seed=20260223 OK rmse=0.0000 2.6s (ETA 43.0min)
+[215/1200] PV=5.5 seed=20260224 OK rmse=0.0000 2.7s (ETA 43.0min)
+[216/1200] PV=5.5 seed=20260225 OK rmse=0.0000 2.6s (ETA 42.9min)
+[217/1200] PV=5.5 seed=20260226 OK rmse=0.0000 2.6s (ETA 42.9min)
+[218/1200] PV=5.5 seed=20260227 OK rmse=0.0000 2.6s (ETA 42.9min)
+[219/1200] PV=5.5 seed=20260228 OK rmse=0.0000 2.6s (ETA 42.8min)
+[220/1200] PV=5.5 seed=20260229 OK rmse=0.0000 2.6s (ETA 42.8min)
+[221/1200] PV=6.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 42.7min)
+[222/1200] PV=6.0 seed=20260211 OK rmse=0.0000 2.7s (ETA 42.7min)
+[223/1200] PV=6.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 42.6min)
+[224/1200] PV=6.0 seed=20260213 OK rmse=0.0000 2.6s (ETA 42.6min)
+[225/1200] PV=6.0 seed=20260214 OK rmse=0.0000 2.6s (ETA 42.5min)
+[226/1200] PV=6.0 seed=20260215 OK rmse=0.0000 2.6s (ETA 42.5min)
+[227/1200] PV=6.0 seed=20260216 OK rmse=0.0000 2.6s (ETA 42.4min)
+[228/1200] PV=6.0 seed=20260217 OK rmse=0.0000 2.6s (ETA 42.4min)
+[229/1200] PV=6.0 seed=20260218 OK rmse=0.0000 2.6s (ETA 42.4min)
+[230/1200] PV=6.0 seed=20260219 OK rmse=0.0000 2.7s (ETA 42.3min)

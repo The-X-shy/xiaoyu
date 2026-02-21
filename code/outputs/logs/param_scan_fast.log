@@ -1,0 +1,273 @@
+nohup: ignoring input
+STAGE_START run_baseline config=configs/exp_param_scan_fast.yaml
+Baseline pitch=100um focal=3.0mm: sr=0.00, rmse=nan
+Baseline pitch=100um focal=4.0mm: sr=0.00, rmse=nan
+Baseline pitch=100um focal=5.0mm: sr=0.00, rmse=nan
+Baseline pitch=100um focal=6.0mm: sr=0.00, rmse=nan
+Baseline pitch=100um focal=8.0mm: sr=0.00, rmse=nan
+Baseline pitch=100um focal=10.0mm: sr=0.00, rmse=nan
+Baseline pitch=100um focal=12.0mm: sr=0.00, rmse=nan
+Baseline pitch=120um focal=3.0mm: sr=0.00, rmse=nan
+Baseline pitch=120um focal=4.0mm: sr=0.00, rmse=nan
+Baseline pitch=120um focal=5.0mm: sr=0.00, rmse=nan
+Baseline pitch=120um focal=6.0mm: sr=0.00, rmse=nan
+Baseline pitch=120um focal=8.0mm: sr=0.00, rmse=nan
+Baseline pitch=120um focal=10.0mm: sr=0.00, rmse=nan
+Baseline pitch=120um focal=12.0mm: sr=0.00, rmse=nan
+Baseline pitch=150um focal=3.0mm: sr=0.00, rmse=nan
+Baseline pitch=150um focal=4.0mm: sr=0.00, rmse=nan
+Baseline pitch=150um focal=5.0mm: sr=0.00, rmse=nan
+Baseline pitch=150um focal=6.0mm: sr=0.00, rmse=nan
+Baseline pitch=150um focal=8.0mm: sr=0.00, rmse=nan
+Baseline pitch=150um focal=10.0mm: sr=0.00, rmse=nan
+Baseline pitch=150um focal=12.0mm: sr=0.00, rmse=nan
+Baseline pitch=180um focal=3.0mm: sr=0.00, rmse=nan
+Baseline pitch=180um focal=4.0mm: sr=0.00, rmse=nan
+Baseline pitch=180um focal=5.0mm: sr=0.00, rmse=nan
+Baseline pitch=180um focal=6.0mm: sr=0.00, rmse=nan
+Baseline pitch=180um focal=8.0mm: sr=0.00, rmse=nan
+Baseline pitch=180um focal=10.0mm: sr=0.00, rmse=nan
+Baseline pitch=180um focal=12.0mm: sr=0.00, rmse=nan
+Baseline pitch=200um focal=3.0mm: sr=0.00, rmse=nan
+Baseline pitch=200um focal=4.0mm: sr=0.00, rmse=nan
+Baseline pitch=200um focal=5.0mm: sr=0.00, rmse=nan
+Baseline pitch=200um focal=6.0mm: sr=0.00, rmse=nan
+Baseline pitch=200um focal=8.0mm: sr=0.00, rmse=nan
+Baseline pitch=200um focal=10.0mm: sr=0.00, rmse=nan
+Baseline pitch=200um focal=12.0mm: sr=0.00, rmse=nan
+Baseline pitch=250um focal=3.0mm: sr=0.00, rmse=nan
+Baseline pitch=250um focal=4.0mm: sr=0.00, rmse=nan
+Baseline pitch=250um focal=5.0mm: sr=0.00, rmse=nan
+Baseline pitch=250um focal=6.0mm: sr=0.00, rmse=nan
+Baseline pitch=250um focal=8.0mm: sr=0.00, rmse=nan
+Baseline pitch=250um focal=10.0mm: sr=0.00, rmse=nan
+Baseline pitch=250um focal=12.0mm: sr=0.00, rmse=nan
+Baseline pitch=300um focal=3.0mm: sr=0.00, rmse=nan
+Baseline pitch=300um focal=4.0mm: sr=0.00, rmse=nan
+Baseline pitch=300um focal=5.0mm: sr=0.00, rmse=nan
+Baseline pitch=300um focal=6.0mm: sr=0.00, rmse=nan
+Baseline pitch=300um focal=8.0mm: sr=0.00, rmse=nan
+Baseline pitch=300um focal=10.0mm: sr=0.00, rmse=nan
+Baseline pitch=300um focal=12.0mm: sr=0.00, rmse=nan
+SOLVER=baseline rows=147 out=outputs/tables/param_scan_fast_baseline_results.csv
+STAGE_DONE run_baseline config=configs/exp_param_scan_fast.yaml
+STAGE_START run_asm config=configs/exp_param_scan_fast.yaml
+[1/147] pitch=100 focal=3.0 seed=20260210 OK rmse=0.0000 6.2s (ETA 15.1min)
+[2/147] pitch=100 focal=3.0 seed=20260211 OK rmse=0.0000 5.8s (ETA 14.5min)
+[3/147] pitch=100 focal=3.0 seed=20260212 OK rmse=0.0000 5.9s (ETA 14.3min)
+[4/147] pitch=100 focal=4.0 seed=20260210 OK rmse=0.0000 5.8s (ETA 14.1min)
+[5/147] pitch=100 focal=4.0 seed=20260211 OK rmse=0.0000 5.8s (ETA 14.0min)
+[6/147] pitch=100 focal=4.0 seed=20260212 OK rmse=0.0000 5.9s (ETA 13.9min)
+[7/147] pitch=100 focal=5.0 seed=20260210 OK rmse=0.0000 5.8s (ETA 13.8min)
+[8/147] pitch=100 focal=5.0 seed=20260211 OK rmse=0.0000 5.8s (ETA 13.6min)
+[9/147] pitch=100 focal=5.0 seed=20260212 OK rmse=0.0000 5.9s (ETA 13.5min)
+[10/147] pitch=100 focal=6.0 seed=20260210 OK rmse=0.0000 5.7s (ETA 13.4min)
+[11/147] pitch=100 focal=6.0 seed=20260211 OK rmse=0.0000 5.8s (ETA 13.3min)
+[12/147] pitch=100 focal=6.0 seed=20260212 OK rmse=0.0000 5.7s (ETA 13.2min)
+[13/147] pitch=100 focal=8.0 seed=20260210 OK rmse=0.0000 5.9s (ETA 13.1min)
+[14/147] pitch=100 focal=8.0 seed=20260211 OK rmse=0.0000 5.9s (ETA 13.0min)
+[15/147] pitch=100 focal=8.0 seed=20260212 OK rmse=0.0000 5.8s (ETA 12.9min)
+[16/147] pitch=100 focal=10.0 seed=20260210 OK rmse=0.0000 5.9s (ETA 12.8min)
+[17/147] pitch=100 focal=10.0 seed=20260211 OK rmse=0.0002 5.8s (ETA 12.7min)
+[18/147] pitch=100 focal=10.0 seed=20260212 OK rmse=0.0000 5.8s (ETA 12.6min)
+[19/147] pitch=100 focal=12.0 seed=20260210 OK rmse=0.0000 5.9s (ETA 12.5min)
+[20/147] pitch=100 focal=12.0 seed=20260211 OK rmse=0.0001 5.7s (ETA 12.4min)
+[21/147] pitch=100 focal=12.0 seed=20260212 OK rmse=0.0000 5.8s (ETA 12.3min)
+[22/147] pitch=120 focal=3.0 seed=20260210 OK rmse=0.0000 4.2s (ETA 12.0min)
+[23/147] pitch=120 focal=3.0 seed=20260211 OK rmse=0.0000 4.0s (ETA 11.8min)
+[24/147] pitch=120 focal=3.0 seed=20260212 OK rmse=0.0000 4.1s (ETA 11.5min)
+[25/147] pitch=120 focal=4.0 seed=20260210 OK rmse=0.0000 4.0s (ETA 11.3min)
+[26/147] pitch=120 focal=4.0 seed=20260211 OK rmse=0.0000 4.1s (ETA 11.1min)
+[27/147] pitch=120 focal=4.0 seed=20260212 OK rmse=0.0000 4.1s (ETA 10.9min)
+[28/147] pitch=120 focal=5.0 seed=20260210 OK rmse=0.0000 4.0s (ETA 10.7min)
+[29/147] pitch=120 focal=5.0 seed=20260211 OK rmse=0.0000 4.0s (ETA 10.5min)
+[30/147] pitch=120 focal=5.0 seed=20260212 OK rmse=0.0000 4.0s (ETA 10.3min)
+[31/147] pitch=120 focal=6.0 seed=20260210 OK rmse=0.0000 4.0s (ETA 10.2min)
+[32/147] pitch=120 focal=6.0 seed=20260211 OK rmse=0.0000 4.1s (ETA 10.0min)
+[33/147] pitch=120 focal=6.0 seed=20260212 OK rmse=0.0000 4.0s (ETA 9.9min)
+[34/147] pitch=120 focal=8.0 seed=20260210 OK rmse=0.0000 4.0s (ETA 9.7min)
+[35/147] pitch=120 focal=8.0 seed=20260211 OK rmse=0.0000 4.0s (ETA 9.6min)
+[36/147] pitch=120 focal=8.0 seed=20260212 OK rmse=0.0000 4.1s (ETA 9.4min)
+[37/147] pitch=120 focal=10.0 seed=20260210 OK rmse=0.0000 4.0s (ETA 9.3min)
+[38/147] pitch=120 focal=10.0 seed=20260211 OK rmse=0.0001 4.0s (ETA 9.2min)
+[39/147] pitch=120 focal=10.0 seed=20260212 OK rmse=0.0000 4.0s (ETA 9.0min)
+[40/147] pitch=120 focal=12.0 seed=20260210 OK rmse=0.0000 4.0s (ETA 8.9min)
+[41/147] pitch=120 focal=12.0 seed=20260211 OK rmse=0.0000 4.1s (ETA 8.8min)
+[42/147] pitch=120 focal=12.0 seed=20260212 OK rmse=0.0000 4.0s (ETA 8.6min)
+[43/147] pitch=150 focal=3.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 8.5min)
+[44/147] pitch=150 focal=3.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 8.3min)
+[45/147] pitch=150 focal=3.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 8.1min)
+[46/147] pitch=150 focal=4.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 8.0min)
+[47/147] pitch=150 focal=4.0 seed=20260211 OK rmse=0.0000 2.7s (ETA 7.8min)
+[48/147] pitch=150 focal=4.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 7.7min)
+[49/147] pitch=150 focal=5.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 7.5min)
+[50/147] pitch=150 focal=5.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 7.4min)
+[51/147] pitch=150 focal=5.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 7.2min)
+[52/147] pitch=150 focal=6.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 7.1min)
+[53/147] pitch=150 focal=6.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 7.0min)
+[54/147] pitch=150 focal=6.0 seed=20260212 OK rmse=0.0000 2.7s (ETA 6.9min)
+[55/147] pitch=150 focal=8.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 6.7min)
+[56/147] pitch=150 focal=8.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 6.6min)
+[57/147] pitch=150 focal=8.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 6.5min)
+[58/147] pitch=150 focal=10.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 6.4min)
+[59/147] pitch=150 focal=10.0 seed=20260211 OK rmse=0.0000 2.6s (ETA 6.3min)
+[60/147] pitch=150 focal=10.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 6.2min)
+[61/147] pitch=150 focal=12.0 seed=20260210 OK rmse=0.0000 2.6s (ETA 6.0min)
+[62/147] pitch=150 focal=12.0 seed=20260211 OK rmse=0.0002 2.7s (ETA 5.9min)
+[63/147] pitch=150 focal=12.0 seed=20260212 OK rmse=0.0000 2.6s (ETA 5.8min)
+[64/147] pitch=180 focal=3.0 seed=20260210 OK rmse=0.0000 1.8s (ETA 5.7min)
+[65/147] pitch=180 focal=3.0 seed=20260211 OK rmse=0.0000 1.8s (ETA 5.6min)
+[66/147] pitch=180 focal=3.0 seed=20260212 OK rmse=0.0000 1.8s (ETA 5.5min)
+[67/147] pitch=180 focal=4.0 seed=20260210 OK rmse=0.0000 1.8s (ETA 5.4min)
+[68/147] pitch=180 focal=4.0 seed=20260211 OK rmse=0.0000 1.8s (ETA 5.3min)
+[69/147] pitch=180 focal=4.0 seed=20260212 OK rmse=0.0000 1.8s (ETA 5.1min)
+[70/147] pitch=180 focal=5.0 seed=20260210 OK rmse=0.0000 1.8s (ETA 5.0min)
+[71/147] pitch=180 focal=5.0 seed=20260211 OK rmse=0.0000 1.9s (ETA 4.9min)
+[72/147] pitch=180 focal=5.0 seed=20260212 OK rmse=0.0000 1.8s (ETA 4.8min)
+[73/147] pitch=180 focal=6.0 seed=20260210 OK rmse=0.0000 1.8s (ETA 4.7min)
+[74/147] pitch=180 focal=6.0 seed=20260211 OK rmse=0.0000 1.8s (ETA 4.6min)
+[75/147] pitch=180 focal=6.0 seed=20260212 OK rmse=0.0000 1.8s (ETA 4.5min)
+[76/147] pitch=180 focal=8.0 seed=20260210 OK rmse=0.0000 1.8s (ETA 4.5min)
+[77/147] pitch=180 focal=8.0 seed=20260211 OK rmse=0.0000 1.8s (ETA 4.4min)
+[78/147] pitch=180 focal=8.0 seed=20260212 OK rmse=0.0000 1.8s (ETA 4.3min)
+[79/147] pitch=180 focal=10.0 seed=20260210 OK rmse=0.0000 1.8s (ETA 4.2min)
+[80/147] pitch=180 focal=10.0 seed=20260211 OK rmse=0.0002 1.8s (ETA 4.1min)
+[81/147] pitch=180 focal=10.0 seed=20260212 OK rmse=0.0000 1.8s (ETA 4.0min)
+[82/147] pitch=180 focal=12.0 seed=20260210 OK rmse=0.0000 1.8s (ETA 3.9min)
+[83/147] pitch=180 focal=12.0 seed=20260211 OK rmse=0.0004 1.9s (ETA 3.8min)
+[84/147] pitch=180 focal=12.0 seed=20260212 OK rmse=0.0000 1.8s (ETA 3.8min)
+[85/147] pitch=200 focal=3.0 seed=20260210 OK rmse=0.0000 1.4s (ETA 3.7min)
+[86/147] pitch=200 focal=3.0 seed=20260211 OK rmse=0.0000 1.5s (ETA 3.6min)
+[87/147] pitch=200 focal=3.0 seed=20260212 OK rmse=0.0000 1.5s (ETA 3.5min)
+[88/147] pitch=200 focal=4.0 seed=20260210 OK rmse=0.0000 1.5s (ETA 3.4min)
+[89/147] pitch=200 focal=4.0 seed=20260211 OK rmse=0.0000 1.5s (ETA 3.3min)
+[90/147] pitch=200 focal=4.0 seed=20260212 OK rmse=0.0000 1.5s (ETA 3.3min)
+[91/147] pitch=200 focal=5.0 seed=20260210 OK rmse=0.0000 1.4s (ETA 3.2min)
+[92/147] pitch=200 focal=5.0 seed=20260211 OK rmse=0.0000 1.4s (ETA 3.1min)
+[93/147] pitch=200 focal=5.0 seed=20260212 OK rmse=0.0000 1.4s (ETA 3.0min)
+[94/147] pitch=200 focal=6.0 seed=20260210 OK rmse=0.0000 1.5s (ETA 3.0min)
+[95/147] pitch=200 focal=6.0 seed=20260211 OK rmse=0.0000 1.4s (ETA 2.9min)
+[96/147] pitch=200 focal=6.0 seed=20260212 OK rmse=0.0000 1.6s (ETA 2.8min)
+[97/147] pitch=200 focal=8.0 seed=20260210 OK rmse=0.0000 1.5s (ETA 2.7min)
+[98/147] pitch=200 focal=8.0 seed=20260211 OK rmse=0.0000 1.5s (ETA 2.7min)
+[99/147] pitch=200 focal=8.0 seed=20260212 OK rmse=0.0000 1.5s (ETA 2.6min)
+[100/147] pitch=200 focal=10.0 seed=20260210 OK rmse=0.0000 1.5s (ETA 2.5min)
+[101/147] pitch=200 focal=10.0 seed=20260211 OK rmse=0.0002 1.5s (ETA 2.5min)
+[102/147] pitch=200 focal=10.0 seed=20260212 OK rmse=0.0000 1.5s (ETA 2.4min)
+[103/147] pitch=200 focal=12.0 seed=20260210 OK rmse=0.0000 1.5s (ETA 2.3min)
+[104/147] pitch=200 focal=12.0 seed=20260211 OK rmse=0.0004 1.5s (ETA 2.3min)
+[105/147] pitch=200 focal=12.0 seed=20260212 OK rmse=0.0000 1.4s (ETA 2.2min)
+[106/147] pitch=250 focal=3.0 seed=20260210 OK rmse=0.0000 0.9s (ETA 2.1min)
+[107/147] pitch=250 focal=3.0 seed=20260211 OK rmse=0.0000 0.9s (ETA 2.1min)
+[108/147] pitch=250 focal=3.0 seed=20260212 OK rmse=0.0000 0.9s (ETA 2.0min)
+[109/147] pitch=250 focal=4.0 seed=20260210 OK rmse=0.0000 0.9s (ETA 1.9min)
+[110/147] pitch=250 focal=4.0 seed=20260211 OK rmse=0.0000 0.9s (ETA 1.9min)
+[111/147] pitch=250 focal=4.0 seed=20260212 OK rmse=0.0000 0.9s (ETA 1.8min)
+[112/147] pitch=250 focal=5.0 seed=20260210 OK rmse=0.0000 0.9s (ETA 1.8min)
+[113/147] pitch=250 focal=5.0 seed=20260211 OK rmse=0.0000 0.9s (ETA 1.7min)
+[114/147] pitch=250 focal=5.0 seed=20260212 OK rmse=0.0000 0.9s (ETA 1.6min)
+[115/147] pitch=250 focal=6.0 seed=20260210 OK rmse=0.0000 0.9s (ETA 1.6min)
+[116/147] pitch=250 focal=6.0 seed=20260211 OK rmse=0.0000 0.9s (ETA 1.5min)
+[117/147] pitch=250 focal=6.0 seed=20260212 OK rmse=0.0000 1.1s (ETA 1.5min)
+[118/147] pitch=250 focal=8.0 seed=20260210 OK rmse=0.0000 0.9s (ETA 1.4min)
+[119/147] pitch=250 focal=8.0 seed=20260211 OK rmse=0.0001 0.9s (ETA 1.4min)
+[120/147] pitch=250 focal=8.0 seed=20260212 OK rmse=0.0000 0.9s (ETA 1.3min)
+[121/147] pitch=250 focal=10.0 seed=20260210 OK rmse=0.0000 0.9s (ETA 1.2min)
+[122/147] pitch=250 focal=10.0 seed=20260211 OK rmse=0.0002 0.9s (ETA 1.2min)
+[123/147] pitch=250 focal=10.0 seed=20260212 OK rmse=0.0000 0.9s (ETA 1.1min)
+[124/147] pitch=250 focal=12.0 seed=20260210 OK rmse=0.0000 0.9s (ETA 1.1min)
+[125/147] pitch=250 focal=12.0 seed=20260211 OK rmse=0.0006 0.9s (ETA 1.0min)
+[126/147] pitch=250 focal=12.0 seed=20260212 OK rmse=0.0000 0.9s (ETA 1.0min)
+[127/147] pitch=300 focal=3.0 seed=20260210 OK rmse=0.0000 0.7s (ETA 0.9min)
+[128/147] pitch=300 focal=3.0 seed=20260211 OK rmse=0.0000 0.7s (ETA 0.9min)
+[129/147] pitch=300 focal=3.0 seed=20260212 OK rmse=0.0000 0.7s (ETA 0.8min)
+[130/147] pitch=300 focal=4.0 seed=20260210 OK rmse=0.0000 0.7s (ETA 0.8min)
+[131/147] pitch=300 focal=4.0 seed=20260211 OK rmse=0.0000 0.6s (ETA 0.7min)
+[132/147] pitch=300 focal=4.0 seed=20260212 OK rmse=0.0000 0.7s (ETA 0.7min)
+[133/147] pitch=300 focal=5.0 seed=20260210 OK rmse=0.0000 0.7s (ETA 0.6min)
+[134/147] pitch=300 focal=5.0 seed=20260211 OK rmse=0.0000 0.7s (ETA 0.6min)
+[135/147] pitch=300 focal=5.0 seed=20260212 OK rmse=0.0000 0.7s (ETA 0.5min)
+[136/147] pitch=300 focal=6.0 seed=20260210 OK rmse=0.0000 0.7s (ETA 0.5min)
+[137/147] pitch=300 focal=6.0 seed=20260211 OK rmse=0.0000 0.7s (ETA 0.4min)
+[138/147] pitch=300 focal=6.0 seed=20260212 OK rmse=0.0000 0.7s (ETA 0.4min)
+[139/147] pitch=300 focal=8.0 seed=20260210 OK rmse=0.0000 0.6s (ETA 0.3min)
+[140/147] pitch=300 focal=8.0 seed=20260211 OK rmse=0.0001 0.6s (ETA 0.3min)
+[141/147] pitch=300 focal=8.0 seed=20260212 OK rmse=0.0000 0.6s (ETA 0.3min)
+[142/147] pitch=300 focal=10.0 seed=20260210 OK rmse=0.0000 0.7s (ETA 0.2min)
+[143/147] pitch=300 focal=10.0 seed=20260211 OK rmse=0.0003 0.7s (ETA 0.2min)
+[144/147] pitch=300 focal=10.0 seed=20260212 OK rmse=0.0000 0.7s (ETA 0.1min)
+[145/147] pitch=300 focal=12.0 seed=20260210 OK rmse=0.0000 0.7s (ETA 0.1min)
+[146/147] pitch=300 focal=12.0 seed=20260211 OK rmse=0.0008 0.7s (ETA 0.0min)
+[147/147] pitch=300 focal=12.0 seed=20260212 OK rmse=0.0000 0.7s (ETA 0.0min)
+
+--- Param-Scan Summary (ASM) ---
+ASM pitch=100um focal=3.0mm: sr=1.00, rmse=0.0000
+ASM pitch=100um focal=4.0mm: sr=1.00, rmse=0.0000
+ASM pitch=100um focal=5.0mm: sr=1.00, rmse=0.0000
+ASM pitch=100um focal=6.0mm: sr=1.00, rmse=0.0000
+ASM pitch=100um focal=8.0mm: sr=1.00, rmse=0.0000
+ASM pitch=100um focal=10.0mm: sr=1.00, rmse=0.0001
+ASM pitch=100um focal=12.0mm: sr=1.00, rmse=0.0001
+ASM pitch=120um focal=3.0mm: sr=1.00, rmse=0.0000
+ASM pitch=120um focal=4.0mm: sr=1.00, rmse=0.0000
+ASM pitch=120um focal=5.0mm: sr=1.00, rmse=0.0000
+ASM pitch=120um focal=6.0mm: sr=1.00, rmse=0.0000
+ASM pitch=120um focal=8.0mm: sr=1.00, rmse=0.0000
+ASM pitch=120um focal=10.0mm: sr=1.00, rmse=0.0000
+ASM pitch=120um focal=12.0mm: sr=1.00, rmse=0.0000
+ASM pitch=150um focal=3.0mm: sr=1.00, rmse=0.0000
+ASM pitch=150um focal=4.0mm: sr=1.00, rmse=0.0000
+ASM pitch=150um focal=5.0mm: sr=1.00, rmse=0.0000
+ASM pitch=150um focal=6.0mm: sr=1.00, rmse=0.0000
+ASM pitch=150um focal=8.0mm: sr=1.00, rmse=0.0000
+ASM pitch=150um focal=10.0mm: sr=1.00, rmse=0.0000
+ASM pitch=150um focal=12.0mm: sr=1.00, rmse=0.0001
+ASM pitch=180um focal=3.0mm: sr=1.00, rmse=0.0000
+ASM pitch=180um focal=4.0mm: sr=1.00, rmse=0.0000
+ASM pitch=180um focal=5.0mm: sr=1.00, rmse=0.0000
+ASM pitch=180um focal=6.0mm: sr=1.00, rmse=0.0000
+ASM pitch=180um focal=8.0mm: sr=1.00, rmse=0.0000
+ASM pitch=180um focal=10.0mm: sr=1.00, rmse=0.0001
+ASM pitch=180um focal=12.0mm: sr=1.00, rmse=0.0001
+ASM pitch=200um focal=3.0mm: sr=1.00, rmse=0.0000
+ASM pitch=200um focal=4.0mm: sr=1.00, rmse=0.0000
+ASM pitch=200um focal=5.0mm: sr=1.00, rmse=0.0000
+ASM pitch=200um focal=6.0mm: sr=1.00, rmse=0.0000
+ASM pitch=200um focal=8.0mm: sr=1.00, rmse=0.0000
+ASM pitch=200um focal=10.0mm: sr=1.00, rmse=0.0001
+ASM pitch=200um focal=12.0mm: sr=1.00, rmse=0.0001
+ASM pitch=250um focal=3.0mm: sr=1.00, rmse=0.0000
+ASM pitch=250um focal=4.0mm: sr=1.00, rmse=0.0000
+ASM pitch=250um focal=5.0mm: sr=1.00, rmse=0.0000
+ASM pitch=250um focal=6.0mm: sr=1.00, rmse=0.0000
+ASM pitch=250um focal=8.0mm: sr=1.00, rmse=0.0000
+ASM pitch=250um focal=10.0mm: sr=1.00, rmse=0.0001
+ASM pitch=250um focal=12.0mm: sr=1.00, rmse=0.0002
+ASM pitch=300um focal=3.0mm: sr=1.00, rmse=0.0000
+ASM pitch=300um focal=4.0mm: sr=1.00, rmse=0.0000
+ASM pitch=300um focal=5.0mm: sr=1.00, rmse=0.0000
+ASM pitch=300um focal=6.0mm: sr=1.00, rmse=0.0000
+ASM pitch=300um focal=8.0mm: sr=1.00, rmse=0.0000
+ASM pitch=300um focal=10.0mm: sr=1.00, rmse=0.0001
+ASM pitch=300um focal=12.0mm: sr=1.00, rmse=0.0003
+
+SOLVER=asm rows=147 out=outputs/tables/param_scan_fast_asm_results.csv
+STAGE_DONE run_asm config=configs/exp_param_scan_fast.yaml
+============================================================
+PARAM SCAN SUMMARY
+============================================================
+Saved: outputs/tables/param_scan_fast_summary.csv
+
+Top-10 parameter pairs by delta_sr then rmse_gain:
+ pitch_um  focal_mm  baseline_sr  baseline_rmse  asm_sr     asm_rmse  delta_sr  rmse_gain
+    100.0       3.0          0.0            NaN     1.0 5.107195e-07       1.0        NaN
+    100.0       4.0          0.0            NaN     1.0 6.655363e-07       1.0        NaN
+    100.0       5.0          0.0            NaN     1.0 6.264463e-07       1.0        NaN
+    100.0       6.0          0.0            NaN     1.0 1.614817e-06       1.0        NaN
+    100.0       8.0          0.0            NaN     1.0 7.230306e-06       1.0        NaN
+    100.0      10.0          0.0            NaN     1.0 5.186174e-05       1.0        NaN
+    100.0      12.0          0.0            NaN     1.0 5.032761e-05       1.0        NaN
+    120.0       3.0          0.0            NaN     1.0 5.111662e-07       1.0        NaN
+    120.0       4.0          0.0            NaN     1.0 5.460236e-07       1.0        NaN
+    120.0       5.0          0.0            NaN     1.0 7.828879e-07       1.0        NaN
+

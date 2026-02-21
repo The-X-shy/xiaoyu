@@ -1,0 +1,41 @@
+STAGE_START run_baseline config=configs/exp_dynamic_range_no_oracle_quick.yaml
+Baseline PV=0.5: success_rate=1.00
+Baseline PV=1.5: success_rate=1.00
+Baseline PV=2.5: success_rate=0.80
+Baseline PV=3.5: success_rate=0.00
+Baseline PV=4.5: success_rate=0.00
+Baseline PV=5.5: success_rate=0.00
+Baseline PV=6.5: success_rate=0.00
+Baseline PV=7.5: success_rate=0.00
+Baseline PV=8.5: success_rate=0.00
+Baseline PV=9.5: success_rate=0.00
+Baseline PV=10.5: success_rate=0.00
+Baseline PV=11.5: success_rate=0.00
+SOLVER=baseline rows=60 out=outputs/tables/dynamic_range_no_oracle_quick_baseline_results.csv
+STAGE_DONE run_baseline config=configs/exp_dynamic_range_no_oracle_quick.yaml
+STAGE_START run_asm config=configs/exp_dynamic_range_no_oracle_quick.yaml
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/autodl-tmp/shws_code/src/cli/run_asm.py", line 172, in <module>
+    main()
+  File "/root/autodl-tmp/shws_code/src/cli/run_asm.py", line 115, in main
+    result = evaluate_single_sample(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/shws_code/src/eval/protocol.py", line 71, in evaluate_single_sample
+    recon = asm_reconstruct_gpu(
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/shws_code/src/recon/asm_gpu.py", line 1023, in asm_reconstruct_gpu
+    result = icp.run(
+             ^^^^^^^^
+  File "/root/autodl-tmp/shws_code/src/recon/asm_gpu.py", line 605, in run
+    batch_coeffs = self._icp_step(batch_coeffs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/autodl-tmp/shws_code/src/recon/asm_gpu.py", line 310, in _icp_step
+    dists_fwd = torch.cdist(E_masked, self.observed)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/functional.py", line 1510, in cdist
+    return _VF.cdist(x1, x2, p, None)  # type: ignore[attr-defined]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 14.00 GiB. GPU 0 has a total capacity of 23.52 GiB of which 9.02 GiB is free. Including non-PyTorch memory, this process has 14.49 GiB memory in use. Of the allocated memory 37.20 MiB is allocated by PyTorch, and 14.01 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR conda.cli.main_run:execute(124): `conda run python -m src.cli.run_asm --config configs/exp_dynamic_range_no_oracle_quick.yaml` failed. (See above for error)

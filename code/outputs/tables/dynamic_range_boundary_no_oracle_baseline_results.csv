@@ -1,0 +1,10 @@
+method,pv_level,seed,success,rmse,missing_ratio,runtime_ms,objective_value,n_matched,residual_raw,residual_trimmed,solver
+baseline,2.5,20260210,True,0.14639872794793357,0.0,4948.269689455628,,6820,,,baseline_extrap_nn_gpu
+baseline,2.5,20260211,False,0.1542455645065055,0.0,2742.8671279922128,,5949,,,baseline_extrap_nn_gpu
+baseline,2.5,20260212,True,0.12434450044735393,0.0,2550.853919237852,,5414,,,baseline_extrap_nn_gpu
+baseline,3.5,20260210,False,0.20245586560181164,0.0,3534.8517298698425,,8552,,,baseline_extrap_nn_gpu
+baseline,3.5,20260211,False,0.21133569375680777,0.0,43.26053522527218,,57,,,baseline_extrap_nn_gpu
+baseline,3.5,20260212,False,0.1742933854603888,0.0,1810.6177560985088,,4582,,,baseline_extrap_nn_gpu
+baseline,4.5,20260210,False,0.26415140105139595,0.0,3453.7859400734305,,7892,,,baseline_extrap_nn_gpu
+baseline,4.5,20260211,False,0.31144022178371944,0.0,5.22531196475029,,4,,,baseline_extrap_nn_gpu
+baseline,4.5,20260212,False,0.2269921977621569,0.0,1574.72328748554,,4203,,,baseline_extrap_nn_gpu

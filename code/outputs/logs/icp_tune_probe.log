@@ -1,0 +1,108 @@
+STAGE_START icp_tune_probe_baseline
+STAGE_START run_baseline config=configs/exp_dynamic_range_probe_no_oracle_baseline.yaml
+Baseline PV=0.5: success_rate=1.00
+Baseline PV=1.5: success_rate=1.00
+Baseline PV=2.5: success_rate=0.67
+Baseline PV=3.5: success_rate=0.00
+Baseline PV=4.5: success_rate=0.00
+Baseline PV=5.5: success_rate=0.00
+Baseline PV=6.5: success_rate=0.00
+Baseline PV=7.5: success_rate=0.00
+Baseline PV=8.5: success_rate=0.00
+Baseline PV=9.5: success_rate=0.00
+Baseline PV=10.5: success_rate=0.00
+Baseline PV=11.5: success_rate=0.00
+SOLVER=baseline rows=36 out=outputs/tables/dynamic_range_probe_no_oracle_baseline_baseline_results.csv
+STAGE_DONE run_baseline config=configs/exp_dynamic_range_probe_no_oracle_baseline.yaml
+STAGE_DONE icp_tune_probe_baseline
+STAGE_START icp_tune_probe_icp_a
+STAGE_START run_asm config=configs/exp_dynamic_range_probe_no_oracle_icp_a.yaml
+[1/36] PV=0.5 seed=20260210 FAIL rmse=1.5179 41.1s (ETA 24.0min)
+[2/36] PV=0.5 seed=20260211 OK rmse=0.0396 34.6s (ETA 21.5min)
+[3/36] PV=0.5 seed=20260212 FAIL rmse=1.2908 37.1s (ETA 20.7min)
+[4/36] PV=1.5 seed=20260210 FAIL rmse=0.9706 33.3s (ETA 19.5min)
+[5/36] PV=1.5 seed=20260211 OK rmse=0.0914 22.9s (ETA 17.5min)
+[6/36] PV=1.5 seed=20260212 OK rmse=0.0652 33.1s (ETA 16.8min)
+[7/36] PV=2.5 seed=20260210 OK rmse=0.1482 33.3s (ETA 16.3min)
+[8/36] PV=2.5 seed=20260211 FAIL rmse=0.1537 15.8s (ETA 14.7min)
+[9/36] PV=2.5 seed=20260212 OK rmse=0.1247 32.0s (ETA 14.2min)
+[10/36] PV=3.5 seed=20260210 FAIL rmse=0.2077 27.2s (ETA 13.5min)
+[11/36] PV=3.5 seed=20260211 FAIL rmse=0.2110 8.1s (ETA 12.1min)
+[12/36] PV=3.5 seed=20260212 FAIL rmse=0.1747 25.2s (ETA 11.5min)
+[13/36] PV=4.5 seed=20260210 FAIL rmse=0.2665 23.0s (ETA 10.8min)
+[14/36] PV=4.5 seed=20260211 FAIL rmse=0.2744 5.5s (ETA 9.7min)
+[15/36] PV=4.5 seed=20260212 FAIL rmse=0.2261 20.4s (ETA 9.2min)
+[16/36] PV=5.5 seed=20260210 FAIL rmse=0.3255 15.1s (ETA 8.5min)
+[17/36] PV=5.5 seed=20260211 FAIL rmse=0.3353 3.8s (ETA 7.7min)
+[18/36] PV=5.5 seed=20260212 FAIL rmse=0.2789 16.7s (ETA 7.1min)
+[19/36] PV=6.5 seed=20260210 FAIL rmse=0.3844 11.7s (ETA 6.6min)
+[20/36] PV=6.5 seed=20260211 FAIL rmse=0.3963 3.0s (ETA 5.9min)
+[21/36] PV=6.5 seed=20260212 FAIL rmse=0.3375 13.2s (ETA 5.4min)
+[22/36] PV=7.5 seed=20260210 FAIL rmse=0.4447 9.4s (ETA 4.9min)
+[23/36] PV=7.5 seed=20260211 FAIL rmse=0.4569 2.2s (ETA 4.4min)
+[24/36] PV=7.5 seed=20260212 FAIL rmse=0.3778 11.2s (ETA 4.0min)
+[25/36] PV=8.5 seed=20260210 FAIL rmse=0.5029 7.2s (ETA 3.6min)
+[26/36] PV=8.5 seed=20260211 FAIL rmse=0.5180 1.8s (ETA 3.1min)
+[27/36] PV=8.5 seed=20260212 FAIL rmse=0.4284 7.4s (ETA 2.8min)
+[28/36] PV=9.5 seed=20260210 FAIL rmse=0.5620 5.6s (ETA 2.4min)
+[29/36] PV=9.5 seed=20260211 FAIL rmse=0.9311 1.6s (ETA 2.0min)
+[30/36] PV=9.5 seed=20260212 FAIL rmse=0.4783 5.0s (ETA 1.7min)
+[31/36] PV=10.5 seed=20260210 FAIL rmse=0.6220 4.3s (ETA 1.4min)
+[32/36] PV=10.5 seed=20260211 FAIL rmse=0.6406 1.4s (ETA 1.1min)
+[33/36] PV=10.5 seed=20260212 FAIL rmse=0.5285 3.9s (ETA 0.8min)
+[34/36] PV=11.5 seed=20260210 FAIL rmse=0.6812 3.4s (ETA 0.5min)
+[35/36] PV=11.5 seed=20260211 FAIL rmse=0.7013 1.3s (ETA 0.2min)
+[36/36] PV=11.5 seed=20260212 FAIL rmse=0.5792 3.2s (ETA 0.0min)
+
+--- Per-PV Summary ---
+ASM PV=0.5: sr=0.33, mean_rmse=0.0396
+ASM PV=1.5: sr=0.67, mean_rmse=0.0783
+ASM PV=2.5: sr=0.67, mean_rmse=0.1365
+ASM PV=3.5: sr=0.00, mean_rmse=nan
+ASM PV=4.5: sr=0.00, mean_rmse=nan
+ASM PV=5.5: sr=0.00, mean_rmse=nan
+ASM PV=6.5: sr=0.00, mean_rmse=nan
+ASM PV=7.5: sr=0.00, mean_rmse=nan
+ASM PV=8.5: sr=0.00, mean_rmse=nan
+ASM PV=9.5: sr=0.00, mean_rmse=nan
+ASM PV=10.5: sr=0.00, mean_rmse=nan
+ASM PV=11.5: sr=0.00, mean_rmse=nan
+
+SOLVER=asm rows=36 out=outputs/tables/dynamic_range_probe_no_oracle_icp_a_asm_results.csv
+STAGE_DONE run_asm config=configs/exp_dynamic_range_probe_no_oracle_icp_a.yaml
+============================================================
+DYNAMIC RANGE EVALUATION
+============================================================
+Baseline DR:  1.5 waves (PV)
+ASM DR:       0.0 waves (PV)
+Range Gain:   0.0x
+Target:       >= 14.0x
+Result:       FAIL
+============================================================
+
+Per-PV breakdown:
+    PV    BL_SR   ASM_SR    BL_RMSE   ASM_RMSE
+--------------------------------------------------
+   0.5     1.00     0.33     0.0300     0.0396
+   1.5     1.00     0.67     0.0795     0.0783
+   2.5     0.67     0.67     0.1354     0.1365
+   3.5     0.00     0.00        nan        nan
+   4.5     0.00     0.00        nan        nan
+   5.5     0.00     0.00        nan        nan
+   6.5     0.00     0.00        nan        nan
+   7.5     0.00     0.00        nan        nan
+   8.5     0.00     0.00        nan        nan
+   9.5     0.00     0.00        nan        nan
+  10.5     0.00     0.00        nan        nan
+  11.5     0.00     0.00        nan        nan
+
+Summary saved to outputs/tables/summary_metrics.csv
+STAGE_DONE icp_tune_probe_icp_a
+STAGE_START icp_tune_probe_icp_b
+STAGE_START run_asm config=configs/exp_dynamic_range_probe_no_oracle_icp_b.yaml
+[1/36] PV=0.5 seed=20260210 FAIL rmse=1.3833 57.5s (ETA 33.6min)
+[2/36] PV=0.5 seed=20260211 FAIL rmse=1.2203 48.5s (ETA 30.0min)
+[3/36] PV=0.5 seed=20260212 FAIL rmse=1.0378 53.2s (ETA 29.2min)
+[4/36] PV=1.5 seed=20260210 FAIL rmse=0.9694 49.0s (ETA 27.8min)
+[5/36] PV=1.5 seed=20260211 OK rmse=0.0909 32.6s (ETA 24.9min)
+Terminated

@@ -1,0 +1,145 @@
+NN model models/nn_warmstart.pt: FOUND
+NN model models/nn_v3_resnet.pt: FOUND
+
+Evaluation: 100 samples per PV level
+PV levels: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0]
+Base seed: 800000
+Timestamp: 20260221_020507
+
+============================================================
+BASELINE METHOD
+============================================================
+  PV= 0.5 | SR=100.0% | mean_RMSE=0.0279 | PASS | 366.8s
+  PV= 1.0 | SR=100.0% | mean_RMSE=0.0529 | PASS | 299.7s
+  PV= 1.5 | SR=100.0% | mean_RMSE=0.0838 | PASS | 299.2s
+  PV= 2.0 | SR= 94.0% | mean_RMSE=0.1111 | FAIL | 285.2s
+  PV= 2.5 | SR= 63.0% | mean_RMSE=0.1286 | FAIL | 250.7s
+  PV= 3.0 | SR= 24.0% | mean_RMSE=0.1395 | FAIL | 224.9s
+  PV= 3.5 | SR=  2.0% | mean_RMSE=0.1481 | FAIL | 182.7s
+  PV= 4.0 | SR=  0.0% | mean_RMSE=inf | FAIL | 138.7s
+
+  Baseline dynamic range: 1.5
+  Saved: outputs/tables/nn_ensemble_eval_baseline_20260221_020507.csv
+
+============================================================
+ASM METHOD (with NN ensemble warm-start)
+============================================================
+    PV=0.5 [10/100] partial_sr=1.00 solver=asm_baseline_icp_gpu
+    PV=0.5 [20/100] partial_sr=0.95 solver=asm_icp_pso_gpu
+    PV=0.5 [30/100] partial_sr=0.97 solver=asm_icp_pso_gpu
+    PV=0.5 [40/100] partial_sr=0.97 solver=asm_icp_pso_gpu
+    PV=0.5 [50/100] partial_sr=0.94 solver=asm_icp_pso_gpu
+    PV=0.5 [60/100] partial_sr=0.95 solver=asm_baseline_icp_gpu
+    PV=0.5 [70/100] partial_sr=0.96 solver=asm_icp_pso_gpu
+    PV=0.5 [80/100] partial_sr=0.96 solver=asm_icp_pso_gpu
+    PV=0.5 [90/100] partial_sr=0.96 solver=asm_icp_pso_gpu
+    PV=0.5 [100/100] partial_sr=0.95 solver=asm_icp_pso_gpu
+  PV= 0.5 | SR= 95.0% | mean_RMSE=0.0323 | PASS | 5379.2s | solvers={'asm_baseline_icp_gpu': 11, 'asm_icp_pso_gpu': 89}
+    PV=1.0 [10/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=1.0 [20/100] partial_sr=0.75 solver=asm_icp_pso_gpu
+    PV=1.0 [30/100] partial_sr=0.83 solver=asm_icp_pso_gpu
+    PV=1.0 [40/100] partial_sr=0.82 solver=asm_icp_pso_gpu
+    PV=1.0 [50/100] partial_sr=0.86 solver=asm_icp_pso_gpu
+    PV=1.0 [60/100] partial_sr=0.83 solver=asm_icp_pso_gpu
+    PV=1.0 [70/100] partial_sr=0.84 solver=asm_icp_pso_gpu
+    PV=1.0 [80/100] partial_sr=0.84 solver=asm_icp_pso_gpu
+    PV=1.0 [90/100] partial_sr=0.84 solver=asm_icp_pso_gpu
+    PV=1.0 [100/100] partial_sr=0.83 solver=asm_icp_pso_gpu
+  PV= 1.0 | SR= 83.0% | mean_RMSE=0.0525 | FAIL | 5183.9s | solvers={'asm_icp_pso_gpu': 100}
+    PV=1.5 [10/100] partial_sr=0.50 solver=asm_icp_pso_gpu
+    PV=1.5 [20/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=1.5 [30/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=1.5 [40/100] partial_sr=0.75 solver=asm_icp_pso_gpu
+    PV=1.5 [50/100] partial_sr=0.74 solver=asm_icp_pso_gpu
+    PV=1.5 [60/100] partial_sr=0.75 solver=asm_icp_pso_gpu
+    PV=1.5 [70/100] partial_sr=0.74 solver=asm_icp_pso_gpu
+    PV=1.5 [80/100] partial_sr=0.75 solver=asm_icp_pso_gpu
+    PV=1.5 [90/100] partial_sr=0.74 solver=asm_icp_pso_gpu
+    PV=1.5 [100/100] partial_sr=0.75 solver=asm_icp_pso_gpu
+  PV= 1.5 | SR= 75.0% | mean_RMSE=0.0791 | FAIL | 5031.6s | solvers={'asm_icp_pso_gpu': 99, 'asm_chamfer_icp_gpu': 1}
+    PV=2.0 [10/100] partial_sr=0.50 solver=asm_icp_pso_gpu
+    PV=2.0 [20/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=2.0 [30/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=2.0 [40/100] partial_sr=0.72 solver=asm_icp_pso_gpu
+    PV=2.0 [50/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=2.0 [60/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=2.0 [70/100] partial_sr=0.71 solver=asm_icp_pso_gpu
+    PV=2.0 [80/100] partial_sr=0.75 solver=asm_icp_pso_gpu
+    PV=2.0 [90/100] partial_sr=0.77 solver=asm_icp_pso_gpu
+    PV=2.0 [100/100] partial_sr=0.77 solver=asm_icp_pso_gpu
+  PV= 2.0 | SR= 77.0% | mean_RMSE=0.0981 | FAIL | 4879.8s | solvers={'asm_icp_pso_gpu': 100}
+    PV=2.5 [10/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+    PV=2.5 [20/100] partial_sr=0.80 solver=asm_icp_pso_gpu
+    PV=2.5 [30/100] partial_sr=0.80 solver=asm_icp_pso_gpu
+    PV=2.5 [40/100] partial_sr=0.75 solver=asm_icp_pso_gpu
+    PV=2.5 [50/100] partial_sr=0.78 solver=asm_icp_pso_gpu
+    PV=2.5 [60/100] partial_sr=0.78 solver=asm_icp_pso_gpu
+    PV=2.5 [70/100] partial_sr=0.74 solver=asm_icp_pso_gpu
+    PV=2.5 [80/100] partial_sr=0.74 solver=asm_icp_pso_gpu
+    PV=2.5 [90/100] partial_sr=0.71 solver=asm_icp_pso_gpu
+    PV=2.5 [100/100] partial_sr=0.70 solver=asm_icp_pso_gpu
+  PV= 2.5 | SR= 70.0% | mean_RMSE=0.1088 | FAIL | 4669.4s | solvers={'asm_icp_pso_gpu': 100}
+    PV=3.0 [10/100] partial_sr=0.50 solver=asm_icp_pso_gpu
+    PV=3.0 [20/100] partial_sr=0.30 solver=asm_icp_pso_gpu
+    PV=3.0 [30/100] partial_sr=0.23 solver=asm_icp_pso_gpu
+    PV=3.0 [40/100] partial_sr=0.28 solver=asm_icp_pso_gpu
+    PV=3.0 [50/100] partial_sr=0.34 solver=asm_icp_pso_gpu
+    PV=3.0 [60/100] partial_sr=0.37 solver=asm_icp_pso_gpu
+    PV=3.0 [70/100] partial_sr=0.37 solver=asm_icp_pso_gpu
+    PV=3.0 [80/100] partial_sr=0.39 solver=asm_icp_pso_gpu
+    PV=3.0 [90/100] partial_sr=0.38 solver=asm_icp_pso_gpu
+    PV=3.0 [100/100] partial_sr=0.36 solver=asm_icp_pso_gpu
+  PV= 3.0 | SR= 36.0% | mean_RMSE=0.1185 | FAIL | 4469.1s | solvers={'asm_icp_pso_gpu': 100}
+    PV=3.5 [10/100] partial_sr=0.40 solver=asm_pso_icp_gpu
+    PV=3.5 [20/100] partial_sr=0.25 solver=asm_sorting_icp_gpu
+    PV=3.5 [30/100] partial_sr=0.20 solver=asm_sorting_icp_gpu
+    PV=3.5 [40/100] partial_sr=0.23 solver=asm_pso_icp_gpu
+    PV=3.5 [50/100] partial_sr=0.26 solver=asm_nn_icp_gpu
+    PV=3.5 [60/100] partial_sr=0.25 solver=asm_sorting_icp_gpu
+    PV=3.5 [70/100] partial_sr=0.27 solver=asm_sorting_icp_gpu
+    PV=3.5 [80/100] partial_sr=0.28 solver=asm_nn_icp_gpu
+    PV=3.5 [90/100] partial_sr=0.26 solver=asm_sorting_icp_gpu
+    PV=3.5 [100/100] partial_sr=0.25 solver=asm_pso_icp_gpu
+  PV= 3.5 | SR= 25.0% | mean_RMSE=0.1208 | FAIL | 4315.3s | solvers={'asm_nn_icp_gpu': 16, 'asm_sorting_icp_gpu': 55, 'asm_pso_icp_gpu': 18, 'asm_baseline_icp_gpu': 4, 'asm_icp_gpu': 5, 'asm_chamfer_icp_gpu': 2}
+    PV=4.0 [10/100] partial_sr=0.50 solver=asm_pso_icp_gpu
+    PV=4.0 [20/100] partial_sr=0.25 solver=asm_sorting_icp_gpu
+    PV=4.0 [30/100] partial_sr=0.20 solver=asm_baseline_icp_gpu
+    PV=4.0 [40/100] partial_sr=0.23 solver=asm_sorting_icp_gpu
+    PV=4.0 [50/100] partial_sr=0.20 solver=asm_pso_icp_gpu
+    PV=4.0 [60/100] partial_sr=0.20 solver=asm_sorting_icp_gpu
+    PV=4.0 [70/100] partial_sr=0.20 solver=asm_sorting_icp_gpu
+    PV=4.0 [80/100] partial_sr=0.17 solver=asm_sorting_icp_gpu
+    PV=4.0 [90/100] partial_sr=0.17 solver=asm_baseline_icp_gpu
+    PV=4.0 [100/100] partial_sr=0.15 solver=asm_sorting_icp_gpu
+  PV= 4.0 | SR= 15.0% | mean_RMSE=0.1257 | FAIL | 4142.4s | solvers={'asm_nn_icp_gpu': 11, 'asm_pso_icp_gpu': 22, 'asm_sorting_icp_gpu': 54, 'asm_icp_gpu': 6, 'asm_baseline_icp_gpu': 7}
+
+  ASM dynamic range: 0.5
+  Saved: outputs/tables/nn_ensemble_eval_asm_20260221_020507.csv
+
+============================================================
+FINAL SUMMARY
+============================================================
+  Baseline DR: 1.5
+  ASM DR:      0.5
+  Gain:        0.33x
+  Target:      >= 14.0x
+  Result:      FAIL
+
+  Per-PV breakdown:
+     PV   BL_SR  ASM_SR   BL_RMSE  ASM_RMSE    BL   ASM
+  -------------------------------------------------------
+    0.5    1.00    0.95    0.0279    0.0323  PASS  PASS
+    1.0    1.00    0.83    0.0529    0.0525  PASS  FAIL
+    1.5    1.00    0.75    0.0838    0.0791  PASS  FAIL
+    2.0    0.94    0.77    0.1111    0.0981  FAIL  FAIL
+    2.5    0.63    0.70    0.1286    0.1088  FAIL  FAIL
+    3.0    0.24    0.36    0.1395    0.1185  FAIL  FAIL
+    3.5    0.02    0.25    0.1481    0.1208  FAIL  FAIL
+    4.0    0.00    0.15       nan    0.1257  FAIL  FAIL
+
+  Summary saved: outputs/tables/nn_ensemble_eval_summary_20260221_020507.csv
+  Log saved: outputs/logs/nn_ensemble_eval_20260221_020507.log
+
+  baseline_dr=1.5, asm_dr=0.5, gain=0.33x
+
+Done!

@@ -1,0 +1,15 @@
+experiment:
+  name: "exp_dynamic_range_quick"
+  seed: 20260210
+  base_config: "configs/base.yaml"
+
+sweep:
+  type: "pv_amplitude"
+  pv_min: 0.5
+  pv_max: 30.0
+  pv_step: 1.0
+  n_repeats: 5
+
+output:
+  raw_dir: "outputs/raw/dynamic_range_quick"
+  table: "outputs/tables/dynamic_range_quick_results.csv"

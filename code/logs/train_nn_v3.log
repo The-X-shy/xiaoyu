@@ -1,0 +1,62 @@
+======================================================================
+Neural Network v3 — ResNet Direct Prediction (128x128, 3ch)
+======================================================================
+Device: cuda
+scipy available for local variance channel
+
+--- Generating 3000 validation samples ---
+  Val: 3000 in 15s (199/s)
+Val: (3000, 3, 128, 128)
+
+--- Training (lazy dataset: 200000 samples/epoch × 30 epochs) ---
+Model: ZernikeResNet, 4,105,993 parameters
+Epoch   1/30 | train=0.200695 | val_mse=0.180936 val_rmse=0.3100 | lr=9.97e-04 | 148s  *BEST*
+Epoch   2/30 | train=0.176448 | val_mse=0.161264 val_rmse=0.2881 | lr=9.89e-04 | 139s  *BEST*
+Epoch   3/30 | train=0.168601 | val_mse=0.157030 val_rmse=0.2827 | lr=9.76e-04 | 141s  *BEST*
+Epoch   4/30 | train=0.163716 | val_mse=0.167317 val_rmse=0.3072 | lr=9.57e-04 | 134s
+Epoch   5/30 | train=0.160088 | val_mse=0.153531 val_rmse=0.2792 | lr=9.34e-04 | 139s  *BEST*
+Epoch   6/30 | train=0.157242 | val_mse=0.152255 val_rmse=0.2865 | lr=9.05e-04 | 137s  *BEST*
+Epoch   7/30 | train=0.154386 | val_mse=0.148387 val_rmse=0.2846 | lr=8.73e-04 | 136s  *BEST*
+Epoch   8/30 | train=0.151596 | val_mse=0.159356 val_rmse=0.3112 | lr=8.36e-04 | 141s
+Epoch   9/30 | train=0.148898 | val_mse=0.142268 val_rmse=0.2716 | lr=7.96e-04 | 136s  *BEST*
+Epoch  10/30 | train=0.146061 | val_mse=0.160589 val_rmse=0.2996 | lr=7.53e-04 | 146s
+Epoch  11/30 | train=0.143966 | val_mse=0.159130 val_rmse=0.3049 | lr=7.06e-04 | 139s
+Epoch  12/30 | train=0.141746 | val_mse=0.143380 val_rmse=0.2813 | lr=6.58e-04 | 142s
+Epoch  13/30 | train=0.139691 | val_mse=0.158618 val_rmse=0.2999 | lr=6.08e-04 | 132s
+Epoch  14/30 | train=0.137650 | val_mse=0.131182 val_rmse=0.2622 | lr=5.57e-04 | 138s  *BEST*
+Epoch  15/30 | train=0.135294 | val_mse=0.177702 val_rmse=0.3039 | lr=5.05e-04 | 160s
+Epoch  16/30 | train=0.133080 | val_mse=0.127524 val_rmse=0.2566 | lr=4.53e-04 | 156s  *BEST*
+Epoch  17/30 | train=0.131061 | val_mse=0.152690 val_rmse=0.3061 | lr=4.02e-04 | 158s
+Epoch  18/30 | train=0.129616 | val_mse=0.133282 val_rmse=0.2698 | lr=3.52e-04 | 155s
+Epoch  19/30 | train=0.127982 | val_mse=0.147661 val_rmse=0.2930 | lr=3.04e-04 | 161s
+Epoch  20/30 | train=0.126098 | val_mse=0.141806 val_rmse=0.2924 | lr=2.58e-04 | 154s
+Epoch  21/30 | train=0.124736 | val_mse=0.152984 val_rmse=0.2972 | lr=2.14e-04 | 152s
+Epoch  22/30 | train=0.123591 | val_mse=0.140652 val_rmse=0.2875 | lr=1.74e-04 | 160s
+Epoch  23/30 | train=0.122237 | val_mse=0.163087 val_rmse=0.3082 | lr=1.37e-04 | 151s
+Epoch  24/30 | train=0.121403 | val_mse=0.163544 val_rmse=0.3086 | lr=1.05e-04 | 166s
+Epoch  25/30 | train=0.120521 | val_mse=0.160525 val_rmse=0.3084 | lr=7.63e-05 | 152s
+Epoch  26/30 | train=0.119701 | val_mse=0.152309 val_rmse=0.3066 | lr=5.28e-05 | 149s
+Epoch  27/30 | train=0.119201 | val_mse=0.145945 val_rmse=0.2983 | lr=3.42e-05 | 158s
+Epoch  28/30 | train=0.118798 | val_mse=0.161099 val_rmse=0.3094 | lr=2.08e-05 | 151s
+Epoch  29/30 | train=0.118666 | val_mse=0.158572 val_rmse=0.3078 | lr=1.27e-05 | 161s
+Epoch  30/30 | train=0.118332 | val_mse=0.167864 val_rmse=0.3104 | lr=1.00e-05 | 157s
+
+Model saved to models/nn_v3_resnet.pt
+
+--- Per-PV Evaluation ---
+
+   PV |     RMSE |      Max |  <0.10 |  <0.15 |  <0.20 | nSpots
+----------------------------------------------------------------------
+  0.5 |   0.0276 |   0.0499 | 100.0% | 100.0% | 100.0% |  12154
+  1.0 |   0.0496 |   0.0924 | 100.0% | 100.0% | 100.0% |  10863
+  2.0 |   0.0837 |   0.1658 |  86.0% | 100.0% | 100.0% |   9241
+  3.0 |   0.1161 |   0.2364 |  28.0% |  86.0% | 100.0% |   7700
+  5.0 |   0.1939 |   0.3954 |   0.0% |  20.0% |  56.0% |   4015
+  7.0 |   0.2674 |   0.5604 |   0.0% |   0.0% |   6.0% |   2432
+  8.0 |   0.3120 |   0.6230 |   0.0% |   0.0% |   6.0% |   1953
+ 10.0 |   0.4048 |   0.8175 |   0.0% |   0.0% |   0.0% |   1288
+ 12.0 |   0.4995 |   0.9874 |   0.0% |   0.0% |   0.0% |    974
+ 15.0 |   0.6078 |   1.1916 |   0.0% |   0.0% |   0.0% |    591
+ 20.0 |   0.8578 |   1.6721 |   0.0% |   0.0% |   0.0% |    399
+
+Done!

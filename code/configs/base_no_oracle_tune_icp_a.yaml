@@ -1,0 +1,55 @@
+experiment:
+  name: "base_no_oracle_tune_icp_a"
+  seed: 20260210
+
+optics:
+  wavelength_nm: 633.0
+  pitch_um: 150.0
+  focal_mm: 6.0
+  fill_factor: 0.95
+
+sensor:
+  pixel_um: 10.0
+  width_px: 2048
+  height_px: 2048
+
+noise:
+  read_sigma: 0.01
+  background: 0.0
+  centroid_noise_px: 0.05
+
+zernike:
+  order: 3
+  coeff_bound: 1.0
+
+baseline:
+  tau_nn_px: 15.0
+  k_fail: 10
+  conflict_ratio_max: 1.0
+  rmse_max: 0.15
+  use_gpu: true
+  require_gpu: true
+  gpu_batch_size: 2048
+  gpu_max_dist_um: null
+  gpu_fallback_to_cpu: true
+
+asm:
+  lambda_reg: 1.0e-5
+  grid_size: 128
+  n_starts: 120
+  n_icp_iter: 50
+  convergence_tol: 1.0e-7
+  max_match_dist_factor: 1.0
+  min_match_ratio: 0.01
+  trim_ratio: 0.8
+  allow_forward_fallback: true
+  use_gpu: true
+  require_gpu: true
+  use_oracle_index_hint: false
+
+evaluation:
+  rmse_max_lambda: 0.15
+  success_rate_min: 0.95
+  required_range_gain: 14.0
+  n_repeats: 20
+

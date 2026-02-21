@@ -1,0 +1,99 @@
+experiment:
+  name: "base_no_oracle"
+  seed: 20260210
+
+optics:
+  wavelength_nm: 633.0
+  pitch_um: 150.0
+  focal_mm: 6.0
+  fill_factor: 0.95
+
+sensor:
+  pixel_um: 10.0
+  width_px: 2048
+  height_px: 2048
+
+noise:
+  read_sigma: 0.01
+  background: 0.0
+  centroid_noise_px: 0.05
+
+zernike:
+  order: 3
+  coeff_bound: 1.0
+
+baseline:
+  tau_nn_px: 15.0
+  k_fail: 10
+  conflict_ratio_max: 1.0
+  rmse_max: 0.15
+  use_gpu: true
+  require_gpu: true
+  gpu_batch_size: 2048
+  gpu_max_dist_um: null
+  gpu_fallback_to_cpu: true
+
+asm:
+  lambda_reg: 1.0e-3
+  grid_size: 128
+  n_starts: 50
+  n_icp_iter: 30
+  convergence_tol: 1.0e-6
+  max_match_dist_factor: 0.50
+  nn_ratio_threshold: 0.92
+  min_match_ratio: 0.05
+  trim_ratio: 0.9
+  huber_delta_um: 40.0
+  coarse_align_dist_factor: 2.0
+  topo_k_neighbors: 4
+  topo_len_tol: 0.35
+  topo_angle_weight: 0.5
+  topo_cost_thresh: 1.0
+  topo_min_neighbors: 2
+  icp_batch_cap: 6
+  allow_forward_fallback: true
+  enable_sorting: true
+  init_probe_steps: 4
+  init_topk: 2
+  init_match_bonus: 0.25
+  use_gpu: true
+  require_gpu: true
+  use_oracle_index_hint: false
+  enable_pso_fallback: true
+  pso_first_pv_threshold: 3.5
+  pso_first_always: false
+  pso_first_max_missing_ratio: 0.05
+  pso_particles: 28
+  pso_iters: 30
+  pso_w_start: 0.9
+  pso_w_end: 0.4
+  pso_c1: 1.8
+  pso_c2: 1.8
+  pso_patience: 6
+  pso_eps_obj: 1.0e-3
+  pso_sample_ref: 768
+  pso_sample_obs: 768
+  pso_lambda_out: 50.0
+  pso_trigger_match_ratio: 0.70
+  pso_always_refine: false
+  # Chamfer distance optimizer v6 (spherical search + Adam refinement)
+  enable_chamfer: true
+  chamfer_n_sample: 30000
+  chamfer_sample_batch: 4096
+  chamfer_sample_topk: 64
+  chamfer_sample_obs_k: 128
+  chamfer_sample_pred_k: 512
+  chamfer_n_refine: 64
+  chamfer_refine_iter: 300
+  chamfer_refine_lr: 0.05
+  chamfer_refine_obs_k: 512
+  chamfer_refine_pred_k: 2048
+  chamfer_max_radius: 10.0
+  chamfer_lambda_reg: 1.0e-3
+  chamfer_lambda_oob: 5.0
+
+evaluation:
+  rmse_max_lambda: 0.15
+  success_rate_min: 0.95
+  required_range_gain: 14.0
+  n_repeats: 20

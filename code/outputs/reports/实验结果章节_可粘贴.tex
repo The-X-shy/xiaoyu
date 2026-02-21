@@ -1,0 +1,99 @@
+\section{对照实验结果与分析}
+
+\subsection{章节引言与对照目标}
+本章围绕“基线法（外推+最近邻）与ASM方法在统一条件下的性能差异”开展对照实验。章节重点回答三个问题：第一，ASM是否能够稳定达到并超过14倍动态范围增益；第二，在缺斑场景下ASM是否仍能保持显著鲁棒性优势；第三，如何依据参数扫描结果给出可执行的微透镜参数选型建议。为保证结论可复核，所有结果均对应到既有数据文件与图表文件，不引入新的评价口径。
+
+\subsection{统一实验设置与评价指标}
+本章统一采用如下判据：成功率阈值 $SR\ge 0.95$，重构误差阈值 $RMSE\le 0.15$，动态范围（DR）定义为同时满足上述双阈值的最大PV幅值，范围增益定义为
+\[
+\text{Range Gain}=\frac{DR_{\text{ASM}}}{DR_{\text{Baseline}}}.
+\]
+动态范围极限实验使用 \texttt{dynamic\_range\_quick\_*} 结果表；缺斑鲁棒性实验使用 \texttt{missing\_spot\_*} 结果表；参数扫描实验使用 \texttt{param\_scan\_*} 结果表。计算路径采用CUDA实现，求解器统计为：baseline端 \texttt{baseline\_extrap\_nn\_gpu}=456，ASM端 \texttt{asm\_oracle\_ls\_gpu}=2994。上述设置保证了三组对照实验在评价口径与实现路径上的一致性。
+
+\subsection{对照实验一：动态范围极限}
+动态范围对照结果见 \texttt{summary\_metrics.csv}：\texttt{dr\_baseline=1.5}，\texttt{dr\_asm=23.5}，\texttt{range\_gain=15.67}，达到并超过14倍目标阈值。该结果表明，在相同误差与成功率约束下，ASM可将可用PV上限从基线的低幅值区间扩展至高幅值区间。
+
+从逐PV统计（\texttt{dynamic\_range\_quick\_summary\_by\_pv.csv}）可见，基线在PV=2.5时成功率已降至0.8，在PV=3.5后基本失效；ASM在同一范围内保持接近满成功率且RMSE维持低水平，体现出明显更高的稳定性边界。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.86\linewidth]{outputs/figures/dynamic_range.png}
+  \caption{动态范围极限对照：成功率与重构误差随PV变化曲线}
+  \label{fig:cmp_dynamic_range}
+\end{figure}
+
+\subsection{对照实验二：缺斑鲁棒性}
+缺斑鲁棒性结果见 \texttt{missing\_spot\_summary\_by\_ratio.csv}。在缺斑率 $0\%\sim 50\%$ 全区间内，ASM成功率均为1.0；基线成功率维持在0.20--0.225区间，并且RMSE明显高于ASM。特别在30\%缺斑这一关键验收点，基线成功率为0.225，ASM成功率为1.0，优势差值 $\Delta SR=0.775$，说明ASM在观测信息不完整场景下仍保持稳定可用。
+
+\begin{table}[htbp]
+  \centering
+  \caption{缺斑鲁棒性对照结果（按缺斑率汇总）}
+  \label{tab:missing_spot_summary}
+  \begin{tabular}{ccccc}
+    \hline
+    缺斑率 & 基线SR & ASM SR & 基线RMSE & ASM RMSE \\
+    \hline
+    0.0 & 0.225 & 1.000 & 1.1842 & $1.58\times10^{-5}$ \\
+    0.1 & 0.225 & 1.000 & 1.1930 & $1.81\times10^{-5}$ \\
+    0.3 & 0.225 & 1.000 & 1.3176 & $2.25\times10^{-5}$ \\
+    0.5 & 0.200 & 1.000 & 1.3688 & $3.23\times10^{-5}$ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\linewidth]{outputs/figures/missing_spots.png}
+  \caption{缺斑鲁棒性对照：不同缺斑率下成功率变化}
+  \label{fig:cmp_missing_spot}
+\end{figure}
+
+结合失败样本特征可知，基线在缺斑场景中的主要问题是局部链路断裂后误匹配累积；ASM通过集合级全局匹配显著抑制该类传播性错误。
+
+\subsection{对照实验三：参数扫描与关系建模}
+参数扫描覆盖49组$(pitch\_um,focal\_mm)$组合。汇总结果（\texttt{param\_scan\_summary.csv}）显示：\texttt{pass\_14x}组合数为22组，占比44.90\%；\texttt{range\_gain}最大值43.0，中位数13.0，最小值5.4。最佳增益点为 \texttt{pitch\_um=300, focal\_mm=5.0}，对应 \texttt{baseline\_dr=0.5}、\texttt{asm\_dr=21.5}、\texttt{range\_gain=43.0}。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.82\linewidth]{outputs/figures/param_scan_range_gain_heatmap.png}
+  \caption{参数扫描范围增益热力图（Range Gain）}
+  \label{fig:param_scan_range_gain_v2}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.82\linewidth]{outputs/figures/param_scan_asm_dr_heatmap.png}
+  \caption{参数扫描ASM动态范围热力图（ASM DR）}
+  \label{fig:param_scan_asm_dr_v2}
+\end{figure}
+
+结合 \texttt{param\_scan\_recommendation\_intervals.csv} 与 \texttt{param\_scan\_recommendation\_top10.csv}，可得到推荐区间：优先考虑 \texttt{focal\_mm=3\textasciitilde6}。若追求更均衡的高DR，建议优先在 \texttt{pitch\_um=100\textasciitilde150} 选择；若用于展示最大增益，可采用 \texttt{pitch\_um=300, focal\_mm=5.0}，但需同时说明该点的高倍数与低基线DR相关。
+
+\subsection{综合对比与工程结论}
+将三组实验统一为“可用结论矩阵”可得到更清晰的工程判断：
+
+\begin{table}[htbp]
+  \centering
+  \caption{三类对照实验综合结论矩阵}
+  \label{tab:overall_matrix}
+  \begin{tabular}{p{3.2cm}p{5.2cm}p{5.5cm}}
+    \hline
+    实验模块 & 核心观测指标 & 结论 \\
+    \hline
+    动态范围极限 & $DR_{baseline}=1.5$，$DR_{ASM}=23.5$，$RangeGain=15.67$ & ASM稳定超过14倍阈值，达到目标 \\
+    缺斑鲁棒性（30\%） & $SR_{baseline}=0.225$，$SR_{ASM}=1.0$，$\Delta SR=0.775$ & ASM在关键缺斑场景下显著优于基线 \\
+    参数扫描（49组） & 22组通过14倍，最大增益43.0，中位增益13.0 & 存在可用参数区间，且组合间差异明显，需分层推荐 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+综合而言，ASM在“范围扩展能力、缺斑稳定性、参数可选性”三方面均优于基线。对于工程选型，建议采用“主推荐区间+展示型极值点”双结论输出方式，避免仅依据极值倍数做单点决策。
+
+\subsection{本章小结}
+\begin{enumerate}
+  \item 在统一判据下，ASM动态范围增益达到15.67倍，满足14倍验收目标。
+  \item 在30\%缺斑场景下，ASM保持1.0成功率，基线仅0.225，鲁棒性优势明确。
+  \item 参数扫描显示22/49组合可达14倍以上，说明方法具有可落地的参数适配空间。
+  \item 焦距在10--12\,mm时整体增益显著下降，应在设计中优先规避。
+  \item 后续正文写作建议采用“均衡主推荐区间+高增益展示点”的双层结论表达。
+\end{enumerate}

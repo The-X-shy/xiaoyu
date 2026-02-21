@@ -1,0 +1,115 @@
+======================================================================
+PAPER-FAITHFUL ASM EVALUATION
+======================================================================
+Config: configs/paper_19x19.yaml
+MLA grid: 19x19
+Subapertures: 361
+Pitch: 150.0 um
+Focal: 5.2 mm
+Pixel: 5.0 um
+Sensor: 1024x1024 px (5120.0x5120.0 um)
+Zernike order: 4 (15 terms)
+PSO particles: 100
+PSO max iter: 300
+Hausdorff threshold: 6.0 px
+N repeats: 5
+PV levels: [0.5, 1.0, 2.0, 3.0, 5.0, 7.0, 10.0]
+Timestamp: 20260221_160852
+
+Conventional max slope: 0.014423 (= 14.42 mrad)
+  = pitch/(2*f) = 150.0/(2*5200.0) um
+  Max displacement = 75.0 um = 15.0 pixels
+
+======================================================================
+BASELINE METHOD (nearest-neighbor matching)
+======================================================================
+  PV=  0.5 | SR=100.0% | RMSE=0.0011 | n_obs=361/361 | PASS | 0.7s
+  PV=  1.0 | SR=100.0% | RMSE=0.0011 | n_obs=361/361 | PASS | 0.7s
+  PV=  2.0 | SR=100.0% | RMSE=0.0011 | n_obs=361/361 | PASS | 0.7s
+  PV=  3.0 | SR=100.0% | RMSE=0.0011 | n_obs=361/361 | PASS | 0.7s
+  PV=  5.0 | SR=100.0% | RMSE=0.0138 | n_obs=361/361 | PASS | 0.7s
+  PV=  7.0 | SR=100.0% | RMSE=0.0241 | n_obs=361/361 | PASS | 0.7s
+  PV= 10.0 | SR=100.0% | RMSE=0.0209 | n_obs=361/361 | PASS | 0.8s
+
+  Baseline dynamic range: 10.0
+
+======================================================================
+PAPER ASM METHOD (Hausdorff + PSO)
+======================================================================
+    PV=0.5 [1/5] sr=1.00 pso_conv=True dH=28.82916157393762
+    PV=0.5 [2/5] sr=1.00 pso_conv=True dH=20.61407257719921
+    PV=0.5 [3/5] sr=1.00 pso_conv=True dH=38.27055552045717
+    PV=0.5 [4/5] sr=1.00 pso_conv=True dH=26.03279034859689
+    PV=0.5 [5/5] sr=1.00 pso_conv=True dH=35.52608225392185
+  PV=  0.5 | SR=100.0% | RMSE=0.0011 | conv=1.00 | iter=1 | n_obs=361/361 | PASS | 0.9s
+    PV=1.0 [1/5] sr=1.00 pso_conv=True dH=36.51329158092886
+    PV=1.0 [2/5] sr=1.00 pso_conv=True dH=37.22156421999324
+    PV=1.0 [3/5] sr=1.00 pso_conv=True dH=45.050049810584326
+    PV=1.0 [4/5] sr=1.00 pso_conv=True dH=38.56960323465475
+    PV=1.0 [5/5] sr=1.00 pso_conv=True dH=65.7960224271202
+  PV=  1.0 | SR=100.0% | RMSE=0.0011 | conv=1.00 | iter=1 | n_obs=361/361 | PASS | 0.5s
+    PV=2.0 [1/5] sr=1.00 pso_conv=True dH=71.64223597239881
+    PV=2.0 [2/5] sr=1.00 pso_conv=True dH=103.08596359021634
+    PV=2.0 [3/5] sr=1.00 pso_conv=True dH=81.92359139871128
+    PV=2.0 [4/5] sr=1.00 pso_conv=True dH=88.72436886187344
+    PV=2.0 [5/5] sr=1.00 pso_conv=True dH=126.33849146815876
+  PV=  2.0 | SR=100.0% | RMSE=0.0011 | conv=1.00 | iter=1 | n_obs=361/361 | PASS | 0.5s
+    PV=3.0 [1/5] sr=1.00 pso_conv=True dH=108.61048352894035
+    PV=3.0 [2/5] sr=1.00 pso_conv=True dH=126.60804911750712
+    PV=3.0 [3/5] sr=1.00 pso_conv=True dH=124.4936601814623
+    PV=3.0 [4/5] sr=1.00 pso_conv=True dH=124.95778028722339
+    PV=3.0 [5/5] sr=1.00 pso_conv=True dH=96.3037888438054
+  PV=  3.0 | SR=100.0% | RMSE=0.0011 | conv=1.00 | iter=2 | n_obs=361/361 | PASS | 0.6s
+    PV=5.0 [1/5] sr=1.00 pso_conv=True dH=82.03133412423206
+    PV=5.0 [2/5] sr=1.00 pso_conv=True dH=85.58088570112541
+    PV=5.0 [3/5] sr=1.00 pso_conv=True dH=84.75358752651438
+    PV=5.0 [4/5] sr=1.00 pso_conv=True dH=114.33267751063134
+    PV=5.0 [5/5] sr=1.00 pso_conv=False dH=140.34893388857913
+  PV=  5.0 | SR=100.0% | RMSE=0.0083 | conv=0.80 | iter=109 | n_obs=361/361 | PASS | 25.2s
+    PV=7.0 [1/5] sr=1.00 pso_conv=True dH=107.26979363884007
+    PV=7.0 [2/5] sr=1.00 pso_conv=True dH=161.57399639647835
+    PV=7.0 [3/5] sr=1.00 pso_conv=False dH=143.67574426348415
+    PV=7.0 [4/5] sr=1.00 pso_conv=True dH=142.56530903232792
+    PV=7.0 [5/5] sr=1.00 pso_conv=True dH=40.149588478920556
+  PV=  7.0 | SR=100.0% | RMSE=0.0076 | conv=0.80 | iter=122 | n_obs=361/361 | PASS | 30.2s
+    PV=10.0 [1/5] sr=1.00 pso_conv=True dH=90.97109429353115
+    PV=10.0 [2/5] sr=1.00 pso_conv=False dH=108.99469985186502
+    PV=10.0 [3/5] sr=1.00 pso_conv=True dH=95.81831709544014
+    PV=10.0 [4/5] sr=1.00 pso_conv=False dH=622.1219063849877
+    PV=10.0 [5/5] sr=1.00 pso_conv=True dH=72.36792685109104
+  PV= 10.0 | SR=100.0% | RMSE=0.0067 | conv=0.60 | iter=185 | n_obs=361/361 | PASS | 69.9s
+
+  ASM dynamic range: 10.0
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+  Baseline DR: 10.0
+  ASM DR:      10.0
+  Gain:        1.00x
+  Target:      >= 14.0x
+  Result:      FAIL
+
+  --- Paper slope-ratio metric ---
+  Conventional max displacement: 75.0 um (15.0 px)
+  ASM max displacement at DR PV=10.0: 521.9 um (104.4 px)
+  Slope ratio (paper metric): 6.96x
+
+  Per-PV breakdown:
+     PV   BL_SR  ASM_SR   BL_RMSE  ASM_RMSE    BL   ASM
+  -------------------------------------------------------
+    0.5    1.00    1.00    0.0011    0.0011  PASS  PASS
+    1.0    1.00    1.00    0.0011    0.0011  PASS  PASS
+    2.0    1.00    1.00    0.0011    0.0011  PASS  PASS
+    3.0    1.00    1.00    0.0011    0.0011  PASS  PASS
+    5.0    1.00    1.00    0.0138    0.0083  PASS  PASS
+    7.0    1.00    1.00    0.0241    0.0076  PASS  PASS
+   10.0    1.00    1.00    0.0209    0.0067  PASS  PASS
+
+  Baseline CSV: outputs/tables/paper_asm_baseline_20260221_160852.csv
+  ASM CSV: outputs/tables/paper_asm_asm_20260221_160852.csv
+  Log: outputs/logs/paper_asm_eval_20260221_160852.log
+
+  baseline_dr=10.0, asm_dr=10.0, gain=1.00x
+
+Done!

@@ -1,0 +1,18 @@
+experiment:
+  name: "exp_param_scan_fast"
+  seed: 20260210
+  base_config: "configs/base.yaml"
+
+sweep:
+  type: "param_scan"
+  pitch_um_list: [100, 120, 150, 180, 200, 250, 300]
+  focal_mm_list: [3, 4, 5, 6, 8, 10, 12]
+  pv_min: 0.5
+  pv_max: 12.0
+  pv_step: 1.0
+  n_repeats: 2
+  early_stop_on_failure: true
+
+output:
+  raw_dir: "outputs/raw/param_scan_fast"
+  table: "outputs/tables/param_scan_fast_results.csv"

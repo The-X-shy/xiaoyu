@@ -1,0 +1,18 @@
+experiment:
+  name: "exp_param_scan_no_oracle"
+  seed: 20260210
+  base_config: "configs/base_no_oracle.yaml"
+
+sweep:
+  type: "param_scan"
+  pitch_um_list: [100, 120, 150, 180, 200, 250, 300]
+  focal_mm_list: [3, 4, 5, 6, 8, 10, 12]
+  pv_min: 0.5
+  pv_max: 24.0
+  pv_step: 1.0
+  n_repeats: 3
+  early_stop_on_failure: true
+
+output:
+  raw_dir: "outputs/raw/param_scan_no_oracle"
+  table: "outputs/tables/param_scan_no_oracle_results.csv"

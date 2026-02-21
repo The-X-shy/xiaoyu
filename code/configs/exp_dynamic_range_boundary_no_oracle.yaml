@@ -1,0 +1,15 @@
+experiment:
+  name: "exp_dynamic_range_boundary_no_oracle"
+  seed: 20260210
+  base_config: "configs/base_no_oracle.yaml"
+
+sweep:
+  type: "pv_amplitude"
+  pv_min: 2.5
+  pv_max: 4.5
+  pv_step: 1.0
+  n_repeats: 3
+
+output:
+  raw_dir: "outputs/raw/dynamic_range_boundary_no_oracle"
+  table: "outputs/tables/dynamic_range_boundary_no_oracle_results.csv"

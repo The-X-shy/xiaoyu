@@ -1,0 +1,130 @@
+\documentclass[12pt,a4paper,fontset=fandol]{ctexart}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shadows}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{8pt}
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[node distance=1.95cm, every node/.style={font=\small}]
+
+% --- 颜色定义 ---
+\definecolor{mainblue}{RGB}{36,96,173}
+\definecolor{lightblue}{RGB}{238,245,255}
+\definecolor{keyorange}{RGB}{255,247,235}
+\definecolor{phasebg}{RGB}{225,237,255}
+
+% --- 样式 ---
+\tikzset{
+  process/.style={
+    rectangle,
+    minimum width=5.2cm,
+    minimum height=1.25cm,
+    text centered,
+    text width=4.8cm,
+    rounded corners=4pt,
+    draw=mainblue!85,
+    line width=0.9pt,
+    fill=lightblue,
+    drop shadow={shadow xshift=1.2pt,shadow yshift=-1.2pt,opacity=0.18}
+  },
+  keyprocess/.style={
+    process,
+    draw=orange!70!black,
+    fill=keyorange,
+    line width=1.05pt
+  },
+  startbox/.style={
+    process,
+    fill=white,
+    draw=mainblue,
+    line width=1.25pt
+  },
+  phase/.style={
+    rectangle,
+    rounded corners=8pt,
+    minimum width=2.7cm,
+    minimum height=0.72cm,
+    text centered,
+    fill=phasebg,
+    draw=mainblue!35,
+    line width=0.6pt,
+    font=\bfseries\small,
+    text=mainblue!85!black
+  },
+  arrow/.style={
+    -{Latex[length=2.8mm,width=2.1mm]},
+    line width=1.05pt,
+    draw=mainblue!85
+  }
+}
+
+% --- 节点 ---
+\node (start) [startbox] {
+  \textbf{课题：基于自适应光斑匹配(ASM)的}\\[-1pt]
+  \textbf{SHWS动态范围软件扩展方法研究}
+};
+
+\node (sim) [process, below=0.68cm of start] {
+  \textbf{SHWS 全链路数值仿真环境构建}\\[-1pt]
+  \footnotesize 波前生成 $\rightarrow$ 微透镜采样 $\rightarrow$ 焦斑成像 $\rightarrow$ 探测器噪声建模
+};
+
+\node (baseline) [process, below left=1.28cm and 3.75cm of sim] {
+  \textbf{对照组：基线方法实现}\\[-1pt]
+  \footnotesize 传统质心探测 + 迭代外推策略 (Extrapolation)
+};
+
+\node (asm) [keyprocess, below right=1.28cm and 3.75cm of sim] {
+  \textbf{实验组：ASM 核心算法设计}\\[-1pt]
+  \footnotesize Hausdorff 距离目标函数构建 + 粒子群优化 (PSO) 全局搜索
+};
+
+\node (eval) [process, below=2.45cm of sim] {
+  \textbf{主实验：等条件对比分析}\\[-1pt]
+  \footnotesize 统一数据集与噪声水平下的：动态范围极限与波前重建精度 (RMSE)
+};
+
+\node (model) [process, below=0.68cm of eval] {
+  \textbf{参数敏感度与量化建模}\\[-1pt]
+  \footnotesize 微透镜参数扫描 ($f$, $d$) $\rightarrow$ 建立范围-参数关系模型 $R=F(\cdot)$
+};
+
+\node (end) [process, below=0.68cm of model, fill=white] {
+  \textbf{总结展望与论文撰写}\\[-1pt]
+  \footnotesize 提炼工程设计准则
+};
+
+% --- 连线 ---
+\draw[arrow] (start) -- (sim);
+\draw[arrow] (sim) -- ++(0,-0.72) -| (baseline);
+\draw[arrow] (sim) -- ++(0,-0.72) -| (asm);
+\draw[arrow] (baseline) |- (eval);
+\draw[arrow] (asm) |- (eval);
+\draw[arrow] (eval) -- (model);
+\draw[arrow] (model) -- (end);
+
+
+
+% --- 分组框 ---
+\begin{scope}[on background layer]
+  \node[
+    rounded corners=7pt,
+    draw=orange!70!black,
+    dashed,
+    line width=0.8pt,
+    inner sep=10pt,
+    fit=(baseline) (asm)
+  ] (algbox) {};
+\end{scope}
+
+\node[
+  fill=white,
+  text=orange!60!black,
+  font=\bfseries\footnotesize,
+  inner sep=1.5pt
+] at ($(algbox.north)+(0,0.28)$) {核心算法实现层};
+
+\end{tikzpicture}
+\end{document}

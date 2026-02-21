@@ -1,0 +1,31 @@
+graph TD
+    %% 定义节点样式：模仿图片的简洁风格（白底黑框矩形）
+    classDef plain fill:#ffffff,stroke:#333333,stroke-width:1.5px,rx:0,ry:0,color:#333333,font-size:15px;
+
+    %% 节点定义
+    Root[夏克-哈特曼传感器大动态范围<br>软件扩展方法研究]
+    
+    Model[SHWS数值仿真环境构建<br>波前生成 - 微透镜阵列 - 焦斑成像]
+    
+    %% 分支结构
+    Baseline[基线系统实现<br>传统质心法 + 模式重构]
+    NewMethod[扩展算法实现<br>迭代外推策略 + 鲁棒性增强机制]
+    
+    %% 汇聚结构
+    MainExp[主实验：相同噪声水平下的<br>动态范围与精度对比分析]
+    
+    ExtExp[拓展实验：极限微透镜参数下的<br>算法边界探索与鲁棒性验证]
+
+    %% 连接关系
+    Root --> Model
+    Model --> Baseline
+    Model --> NewMethod
+    Baseline --> MainExp
+    NewMethod --> MainExp
+    MainExp --> ExtExp
+
+    %% 应用样式
+    class Root,Model,Baseline,NewMethod,MainExp,ExtExp plain;
+
+    %% 调整布局距离，使其更像图片
+    linkStyle default stroke:#333333,stroke-width:1.5px,fill:none;

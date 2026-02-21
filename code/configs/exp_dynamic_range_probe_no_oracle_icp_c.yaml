@@ -1,0 +1,16 @@
+experiment:
+  name: "exp_dynamic_range_probe_no_oracle_icp_c"
+  seed: 20260210
+  base_config: "configs/base_no_oracle_tune_icp_c.yaml"
+
+sweep:
+  type: "pv_amplitude"
+  pv_min: 0.5
+  pv_max: 12.0
+  pv_step: 1.0
+  n_repeats: 3
+
+output:
+  raw_dir: "outputs/raw/dynamic_range_probe_no_oracle_icp_c"
+  table: "outputs/tables/dynamic_range_probe_no_oracle_icp_c_results.csv"
+

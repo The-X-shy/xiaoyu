@@ -1,0 +1,459 @@
+             Sorting method to extend the dynamic range of
+             the Shack–Hartmann wave-front sensor
+             Junwon Lee, Roland V. Shack, and Michael R. Descour
+                                             We propose a simple and powerful algorithm to extend the dynamic range of a Shack–Hartmann
+                                             wave-front sensor. In a conventional Shack–Hartmann wave-front sensor the dynamic range is limited
+                                             bythef-numberofalenslet,becausethefocalspotisrequiredtoremainintheareaconﬁnedbythesingle
+                                             lenslet. The sorting method proposed here eliminates such a limitation and extends the dynamic range
+                                             by tagging each spot in a special sequence. Since the sorting method is a simple algorithm that does not
+                                             change the measurement conﬁguration, there is no requirement for extra hardware, multiple measure-
+                                             ments,orcomplicatedalgorithms.Wenotonlypresentthetheoryandacalculationexampleofthesorting
+                                             method but also actually implement measurement of a highly aberrated wave front from nonrotational
+                                             symmetric optics.   ©2005 Optical Society of America
+                                                OCIS codes: 120.3940, 350.4800.
+             1.   Introduction                                                                                      15
+                                                                                  the f-number of the lenslet.         It is well known that
+             The Shack–Hartmann wave-front sensor has been a                      there is a trade-off between the sensitivity and the
+             popularwave-frontsensinginstrumentinvariousar-                       dynamic range of the Shack–Hartmann wave-front
+             eas such as optical testing, astronomical adaptive                   sensor. If the f-number is relatively short, a high
+                                                                     1–6          dynamic range is achieved, but the corresponding
+             optics, and ophthalmology since its invention.              The      sensitivity is degraded and vice versa. A novel ap-
+             advantages of the Shack–Hartmann wave-front sen-                     proach is necessary to overcome the trade-off in a
+             sor are the simplicity of the conﬁguration, real-time                conventional Shack–Hartmann wave-front sensor.
+             data processing, and a high dynamic range. In prin-                     Theearliestapproachtoovercomingthetrade-offis
+             ciple the Shack–Hartmann wave-front sensor sam-                      to track the movement of focal spots along an optical
+             ples a wave-front slope at a number of positions                     axisbymeasurementsatadditionalplanesbetweena
+             through measurement of the displacement of the fo-                   lenslet array and a detection plane, usually the focal
+             cal spots createdbyalensletarray.Theoriginalwave
+                                                                                                           16
+             front is reconstructed, based on the wave-front slope                plane of the lenslet.       Another novel approach is to
+                                                                         7–14     use a modiﬁed unwrapping algorithm to eliminate
+             data, by using well-known mathematical tools.                        the discontinuities in the patterns of the local posi-
+             Mathematically the wave-front reconstruction is                      tions, which are wrapped modulo P, where P is the
+             equivalent to solving a linear inverse problem.
+                                                                                                              15
+                In a conventional Shack–Hartmann wave-front                       pitch of a single lenslet.     Thetechniquepresentedin
+             sensor the focal spot is required to remain in the                   Ref. 17 uses two different measurements, including a
+             imageareaconﬁnedbyalenslet,sothatthedynamic                          conventional image of the wave front and the use of
+             range (the maximum tolerable spot displacement) of                   the classical Shack–Hartmann sensor image. In Ref.
+             theShack–Hartmannwave-frontsensorislimitedby                         18 an estimate of the positions of the focal spots of
+                                                                                  neighboring lenslets is proposed by extrapolating a
+                                                                                  two-dimensional spline function that assigns the
+                                                                                  spots to their respective reference points.
+                J. Lee (junwon.lee@kodak.com) is with the Display Science and        There are other approaches that use specially de-
+             Technology Center, Eastman Kodak Company, 1700 Dewey Ave-            signed devices. For example, an astigmatic lenslet
+             nue, Rochester, New York 14650. R. V. Shack and M. R. Descour        arraythatgivesakindofmarktoeachspotthatdoes
+             are with the Optical Sciences Center, University of Arizona, 1630    not affect the position of the center of the spot but
+             East University Boulevard, Tucson, Arizona 85721.                    that allows a deﬁnite recognition of the spot.19 An-
+                Received 2 February 2005; revised manuscript received 18          other approach uses a spatial light modulation array
+             March 2005; accepted 24 March 2005.                                  to switch the subapertures on and off so as to allow
+                0003-6935/05/234838-08$15.00/0
+                                                                                                                                         20
+                ©2005 Optical Society of America                                  the spots to enter the adjacent subapertures.
+             4838      APPLIED OPTICS  Vol. 44, No. 23  10 August 2005
+               In this paper we present a simple and robust tech-         two-dimensional size of the lenslet, respectively;
+            nique for extending the dynamic range by using                Wx, y is an incident wave front; and A is the area of
+                                                                                                                    j
+            softwareratherthanhardware.Software-basedsolu-                thejthlensletandiscalledasubaperture.Noticethat
+            tions are faster than hardware-based solutions and            the slope of the wave front is averaged over the sub-
+                                         18
+            do not require extra cost.      The technique that we         aperture.
+            presentinthispaperrequiresonlythesortingoffocal                 Amongseveral ways to reconstruct the wave front
+            spots in a special sequence that is based on the x and        the modal estimation is most popularly used.9 The
+            y position of the centroid of the focal spots. So we call     modalestimationrequiresdecompositionofthewave
+            it the sorting method. The simplicity and robustness          front with a set of basis functions. The wave-front
+            of the sorting method result from the unique charac-          construction is equivalent to the estimation of coefﬁ-
+            teristics of the Shack–Hartmann sensor, that is, the          cients of each basis function. Let us assume a wave
+            linear algebraic relationship between focal-spot dis-         front Wx, y decomposed with some basis functions
+            placementsandthewave-frontslope.Itiswellknown                 Bx, y:
+            thattheprocessofwave-frontreconstructionisequiv-                i
+            alent to solving these linear algebraic equations. In                                    imax
+            principle the sorting method requires that the linear                         W(x, y)  cB(x, y),                  (2)
+                                                                                                     i1 i i
+            algebraic equations be sorted in a certain sequence.
+            For example, this paper uses singular value de-               where Bx, y is the ith basis function, c is its coef-
+            composition (SVD) to solve the linear algebraic                        i                                   i
+                                                                          ﬁcient, and i     is an expansion truncation number.
+                       12,14                                                            max
+            equations.      TheSVDrequiresaprecalculatedsen-              Thesortingmethodputsnoconstraintonselectionof
+            sitivity matrix whose rows correspond to displace-            the basis polynomial. In Section 3 the Zernike poly-
+            ment of the focal spots. The essence of the sorting           nomial is chosen to demonstrate the sorting method.
+            method is to sort the rows in a predetermined se-             Byplugging Eq. (2) into Eq. (1), we obtain two linear
+            quence. Theoretical details are presented in Section          equations per focal spot:
+            2.
+               In Section 2 we review the principle of the Shack–                                    imax
+            Hartmann wave-front sensor and describe the theo-                                          cB(x, y)
+                                                                                            fl       i i        	
+            retical development of the sorting method. Although                   x              i1           dxdy
+                                                                                     j     A             x
+            theprincipleoftheShack–Hartmannwave-frontsen-                                    j
+            sor is well known, it is necessary to revisit it to de-                             Aj
+            velopthesortingmethod.InSection2wealsodiscuss                                imax   fl     Bi(x, y)
+            the limitations of the conventional and sorting meth-                                           dxdy ci,
+                                                                                         i1   A         x         	
+                                                                                                 j
+            ods. We present the calculation example where the                                       Aj
+            maximumwavefront can be measured by using two
+            methods. In Section 3 we present an experimental                             imax    f      B(x, y)
+            example of the sorting method to show the extension                   y    l              i      dxdy c.       (3)
+                                                                                     j   i1   A           y         	 i
+            of the dynamic range. The unconventional optics is                                    j
+            measured, and its wave front is reconstructed with                                      Aj
+            the sorting method. We also introduce an actual               If there are N focal spots, there are 2  N equations
+            Shack–Hartmann wave-front sensor built for imple-             with i    of unknown coefﬁcients. For simplicity Eqs.
+            menting the sorting method in Section 4.                            max
+                                                                          (3) can be represented in matrix notation:
+            2.  Mathematical Background of the Sorting Method                                     S·c,                        (4)
+            Basically the Shack–Hartmann wave-front sensor is
+            designed to measure the displacement of focal spots.          wherecontainsx-andy-spotdisplacementdataand
+            Amongseveral possible ways to detect displacement             isa2N  1 column vector. The column vector c
+            wechosetocalculateashiftinthecenterofgravityor                contains i    of unknowncoefﬁcients. The matrix Sis
+            centroid. It can be shown that displacement of a cen-                   max
+            troid or spot displacement x, y is linearly pro-          called the sensitivity matrix. By solving Eq. (4) for an
+                                              j    j                      unknown vector c, the wave front is reconstructed.
+            portional to the average local slope of the incident          WeselecttheSVDtosolveEq.(4)becausetheSVDis
+                                                 21
+            wave front across a single lenslet :                                 18
+                                                                          robust   and available in many commercial software
+                                                                          packages. The SVD is used to calculate a pseudoin-
+                                  f     W(x, y)                          verse matrix to solve Eq. (4) in a least-squares
+                         xj                   dxdy,                         14
+                                 A         x                             sense.   The solution is
+                                     Aj
+                                                                                                 cˆ S·,                      (5)
+                                  f     W(x, y)
+                         yj                   dxdy,         (1)                
+                                 A         y                             whereS isapseudoinversematrixofthesensitivity
+                                     Aj                                   matrix and cˆ is a least-squares-sense solution. Note
+                                                                          that the rows in the sensitivity matrix correspond to
+            where f and A represent the focal length and the              the spot displacements, and their sequence has no
+                                                                            10 August 2005  Vol. 44, No. 23  APPLIED OPTICS  4839
+               effect on wave-front reconstruction. The sorting
+               methodgeneratesaspecialsequenceofspotdisplace-
+               mentsthatallowtheexpansionofthedynamicrange
+               without affecting wave-front reconstruction.
+                 In a conventional Shack–Hartmann wave-front
+               sensor the dynamic range is limited by the f-number
+               of the lenslet. A spot is required to stay inside a
+               subaperture deﬁned by the original lenslet. If a wave
+               front varies so fast that a spot displacement goes
+               beyondthesubaperture,aspotcannotbeassignedto
+               the original lenslet and the reference focal spot. The
+               spot displacement cannot be determined without
+               knowing the reference position. From Eq. (1) the
+               maximumwave-front slope is expressed as
+                             
+1  W(x, y)	dxdy
+ w ,
+                               A            x                   2f
+                                    Aj
+                             
+1  W(x, y)	dxdy
+ w ,                          (6)
+                               A            y                   2f
+                                    Aj
+               where w is the width of the subaperture.
+                 Thekeyissueishowtoassignthecorrectreference
+               positions to the focal spots even if they leave their
+               original subaperture. We call the focal spots gener-
+               atedbyanaberratedwavefrontaberratedfocalspots
+               or simply aberrated spots. The reference position can
+               be the center of the corresponding lenslet or the ref-
+               erence focal spot created by a planar wave front. The
+               latter is a better choice because the mechanical error
+               or the aberration of the components can be compen-
+               sated. Usually the reference focal spot is measured
+               only once and saved for future use.
+                 Thesorting process assigns the correct reference fo-
+               calspotstotheaberratedspotsbysortingthereference
+               focal spots and the aberrated focal spots in the same
+               sequence. Figure 1 shows a sample set of reference
+               spotsandthecorrespondingaberratedspotsbeforethe
+               sorting process. The rectangular grids indicate the
+               subapertures that are projected on the image plane                        Fig. 1.   Plot of the focal spots before sorting is performed: top,
+               where the focal spots are formed. Let us assume that                      reference focal spots; bottom, aberrated focal spots in the same
+               the position of the focal spots is from one known uni-                    conﬁguration as in the top ﬁgure. The rectangular grid indicates
+               versal origin. This is possible because the intensity of                  the subaperture bounded by the lenslet array.
+               the focal spot is recorded on an integrated digitization
+               sensor such as a CCD chip. The O in the left lower
+               cornerischosenastheuniversalorigininourcase.The
+               position data are represented by the Greek characters                     The meansthatthefocal spot belongs to the ﬁrst
+               in Fig. 1. As shown in Fig. 1, bottom, the aberrated                              1
+                                                                                         row, that is, the lowest row. We select the ﬁve lowest
+               spots have already exceeded the conventional limit of                     spots ( ,  , 	 , 
+ ,  in Fig. 2) according to their y
+               the dynamic range. From the reference spots one can                                  1   1    1   1    1
+                                                                                         position and let them belong to the lowest row. The
+               determinehowmanyspotsthereareineachrowinthe                               sameprocedurecanberepeatedfortherestofthefocal
+               region of interest. For example, the ﬁrst ﬁve lowest                      spots. Every focal spot is tagged with a row number.
+               spots belong to the lowest row (row 1), and the next                         After sorting by the y position, we sort the focal
+               seven lowest spots belong to the second lowest row                        spotsineachrowbythexposition;theresultisinFig.
+               (row2).Thesameideaisappliedtotheaberratedfocal                            3. Unlike the previous sorting where every focal spot
+               spots. To determine which rows each spot belongs to,                      is consideredintheregionofinterestsimultaneously,
+               the aberrated spots in Fig. 1, bottom, should be sorted                   in sorting by the x position we consider only the focal
+               by their y position. Figure 2 shows the sorting result,                   spots belonging to a single row. The x-position se-
+               and the focal spots are tagged with the row number.                       quence is tagged after the row number. For example,
+              4840       APPLIED OPTICS  Vol. 44, No. 23  10 August 2005
+                                                                                             Fig. 4.   Spot crossing. Two adjacent focal spots cross each other.
+                                                                                             the ﬁrst ﬁve spot data in the centroid position vector,
+                                                                                             that is,
+               Fig. 2.   Plot of aberrated focal spots after sorting is performed in                T
+                                                                                               (p ) { ,  , 	 , ···, ,  ,  , ···}.
+               the y position.                                                                    a         1, 1   1, 2   1, 3           2, 1   2, 2   2, 3
+                                                                                                                                                                  (8)
+               	     means that focal spot  belongs to the ﬁrst row,                        The procedure is repeated until every spot is sorted.
+                 1, 3
+               and its x-position sequence in the ﬁrst row is third.                         Notethatthespotsaresequencednotbysubaperture
+               The positions of the focal spots in the ﬁrst row are                          location but by their centroid positions. The same
+               saved in the column vector with the sequence deter-                           steps can be applied to the reference spots to create a
+               mined by the sorting procedure, that is,                                      centroid position vector p .
+                                                                                                                                r
+                            (p )T{ ,  , 	 , 
+ ,  },                             (7)            T
+                               a         1, 1   1, 2   1, 3   1, 4  1, 5                      (p ) {A , B , X , ···, ,  , H , ···}.
+                                                                                                 r         1, 1   1, 2   1, 3            2, 1   2, 2    2, 3
+               wherep istermedthecentroidpositionvectorforthe                                                                                                     (9)
+                          a
+               aberrated focal spots and T is a transpose operator.                          Since the sequence of two centroid position vectors is
+               Wecanapplythesameprocedure for the next seven                                 the same, the spot displacement can be calculated
+               spots in the second lowest row and append those to                            correctly by subtracting two vectors:
+                                                                                                                         p p .                               (10)
+                                                                                                                           a      r
+                                                                                             It is valid even if the aberrated focal spots leave their
+                                                                                             original subapertures as shown in Fig. 3. There are a
+                                                                                             fewoccasionsinwhichthesortingmethodfails.They
+                                                                                             are discussed in Section 3. The remaining step is to
+                                                                                             reconstruct the wave front by using Eq. (5) and the
+                                                                                             precalculated sensitivity matrix.
+                                                                                             3.   Expansion of the Dynamic Range
+                                                                                             In this section we address the expansion of the dy-
+                                                                                             namic range by the sorting method. The sorting
+                                                                                             method is limited by two types of focal spot crossing.
+                                                                                             Oneisacrossingbetweenadjacentspotsandiscalled
+                                                                                             spot crossing. The other is a crossing between adja-
+                                                                                             cent rows and is called row crossing. Spot crossing
+                                                                                             occurs when two adjacent focal spots overlap or cross
+                                                                                             owing to the fast-varying wave-front slope. One ex-
+                                                                                             ampleisillustrated in Fig. 4. Let us assume that one
+                                                                                             lenslet A has optic axis (or reference position) a and
+                                                                                             theotherlensletBhasopticaxisb.Sincetheincident
+               Fig. 3.   Plot of aberrated focal spots after sorting is performed in         wavefrontvariesfastoverthetwolenslets,theupper
+               the y and x positions sequentially.                                           lenslet A creates focal spot  below focal spot  cre-
+                                                                                                10 August 2005  Vol. 44, No. 23  APPLIED OPTICS               4841
+                                                                                             It is not difﬁcult to notice that in Eq. (11) the varia-
+                                                                                             tion in the averaged wave-front slope is calculated
+                                                                                             over two adjacent lenslets, which corresponds to the
+                                                                                             curvature of the wave front. In other words the sort-
+                                                                                             ingmethodisgenerallylimitednotbytheslopeofthe
+                                                                                             wave front but by the curvature of wavefront. Com-
+                                                                                             paredwithEqs.(6),Eq.(11)indicatesthatthesorting
+                                                                                             method results in a much larger dynamic range. For
+                                                                                             example, let us assume that the image of the exit
+                                                                                             pupil has a diameter of 2.7 mm, the lenslet’s focal
+                                                                                             length is 7.8 mm, and its aperture width is 0.3 mm.
+                                                                                             Spot crossing would occur when the wave-front cur-
+                                                                                             vature has 70 waves of defocus over the entire exit
+                                                                                             pupil. According to Eq. (6) the conventional method
+                                                                                             canmeasureasmanyasninewavesofdefocusinthe
+                                                                                             same conditions.
+                                                                                                Rowcrossing is illustrated in Fig. 5. The spot dis-
+                                                                                             placementsarecreatedby24ofsphericalaberration
+                                                                                             in Fig. 5, top, and 27 of spherical aberration in Fig.
+                                                                                             5, bottom. The two spots,  and , are the highest
+                                                                                             spots in the ﬁrst row, and  is the lowest spot in the
+                                                                                             secondrow.Thetwospots,and,startmovingupas
+                                                                                             the spherical aberration increases. In Fig. 5, bottom,
+                                                                                             andarelocatedhigherthansothatthesortingby
+               Fig. 5.   Rowcrossing. Horizontal lines pass on the spots that are            the y position would fail to count the ﬁrst ﬁve spots
+               aligned on the y axis: top, spot displacement when the wave front             correctly. Based on this phenomenon, the maximum
+               has 24 of spherical aberration; bottom, crossing of two adjacent             measurable wave front is determined by
+               rows when the wave front has 27 of a spherical aberration.
+               ated by lower lenslet B. The sorting method assigns                           max         1      W(x, y)	dxdy
+               reference position a to the aberrated spot  and vice                               w·A
+                 y
+               versa so that it calculates an incorrect spot displace-                                           Aj
+               ment. Mathematically the spot crossing starts when                                                    W(x, y)	dxdy                  1, (12)
+               variation of the wave front over two adjacent lenslets                                                             y              
+	      f
+               is                                                                                                       Ak
+                                                                                             whereA andA arethetwo-dimensionalrangeofany
+                  1             W(x, y)                                                                 j        k
+               w·A               x      	dxdy                                            subaperture in two adjacent rows.
+                           A                                                                    Zernike polynomials may be used to calculate the
+                            j                                                                dynamic-range expansion afforded by our sorting
+                                       W(x, y)	dxdy 1. (11)                             method. In Table 1 we report the maximum Zernike
+                                                      x               f                    coefﬁcients that can be measured for a particular
+                                          Aj1                                               example by two different methods: a conventional
+                                                        Table 1.  Calculation of the Maximum Zernike Coefﬁcient in Wavesa
+                     Zernike Coefﬁcients                                Name                                 Conventional Method               Sorting Method
+                              Z                      Defocus                                                          19.16                         328.04
+                               3
+                              Z                      Astigmatism along the x axis                                     38.32                         656.09
+                               4
+                              Z                      Astigmatism along the y axis                                     38.32                         656.09
+                               5
+                              Z                      Comaalong the x axis                                             11.37                           46.65
+                               6
+                              Z                      Comaalong the y axis                                             11.37                           46.65
+                               7
+                              Z                      Primary spherical                                                 6.49                           19.09
+                               8
+                              Z                      Trefoil x axis                                                   26.82                           50.1
+                               9
+                              Z                      Trefoil y axis                                                   26.82                           50.1
+                               10
+                              Z                      Secondary astigmatism along the x axis                            8.96                           45.94
+                               11
+                              Z                      Secondary astigmatism along the y axis                            8.96                           45.94
+                               12
+                              Z                      Secondary coma along the x axis                                   4.79                           11.73
+                               13
+                              Z                      Secondary coma along the y axis                                   4.79                           11.73
+                               14
+                              Z                      Secondary spherical                                               3.28                            6.83
+                               15
+                  a
+                   The exit pupil has a radius of 3.15 mm.
+               4842       APPLIED OPTICS  Vol. 44, No. 23  10 August 2005
+                                                                                               The optics under test is a cubic phase plate from
+                                                                                            CDM Optics.24 We chose this unconventional and
+                                                                                            nonrotationally symmetric optical element to demon-
+                                                                                            strate the versatility of the sorting method. It creates
+                                                                                            ahighlyaberratedwavefrontsufﬁcientforobserving
+                                                                                            thefocal spots leaving the original subapertures. The
+                                                                                            cubic phase plate creates a phase delay that has a
+                                                                                            cubic dependence on the x and y positions. The phase
+                                                                                            delay is
+                                                                                                                               2 3         3
+                                                                                                                  P(x, y)  (x y ).                          (13)
+               Fig. 6.  Actual Shack–Hartmann wave-front sensor. The pinhole
+               is moved out of sight. The system total track is 15 cm, which is the         Note that the phase delay is equivalent to the wave
+               distance from the optics being tested to the CCD chip.                       front behind the cubic phase plate if a planar wave
+                                                                                            front is incident on the cubic phase plate. Before the
+                                                                                            cubic phase plate is mounted, reference focal spots
+               method whose dynamic range is limited by Eq. (6)                             are measured by sending a plane wave front without
+               andasortingmethodwhosedynamicrangeislimited                                  the optics being tested. The same procedure is re-
+               by Eqs. (11) and (12). The sequence and name of the                          peated after the cubic phase plate is mounted. Since
+               Zernike polynomials follow the University of Arizona                         the reference focal spots are recorded only once, the
+                     22                                                                     sorting method is different from the approach re-
+               rule.     The exit pupil in these calculations has a ra-                     quiring measurements of the focal spots at multiple
+               dius of 3.15 mm. The lenslet’s focal length is 7.8 mm,                       positions.Figure7showsthemeasuredspotdisplace-
+               andits aperture width is 0.3 mm. As seen in Table 1                          ments that are the result of the subtraction of the
+               the dynamic range increased by a factor of 17 in the                         reference focal spots, the aberrated focal spots, and
+               low-order Zernike polynomials. The extension of the                          thecorrespondingreconstructedwavefront.Thepat-
+               dynamic range is reduced at high Zernike polynomi-                           terns in Fig. 7 show the unique characteristics of a
+               als because the sorting method is limited by the                             cubic phase plate (see the point-spread function and
+               wave-front curvature and works best with the                                 phase plot in Ref. 25). Note that the maximum spot
+               Zernike polynomials that have second-order depen-                            displacement is 0.33 mm in Fig. 7, top. This is twice
+               dence such as Z , Z , and Z .
+                                     3    4          5                                      as large as the dynamic range of the conventional
+               4.   Experimental Demonstration                                              method, which is 0.15 mm. The sorting method suc-
+               The most critical part of this paper is demonstration                        ceeds in reconstructing the wave front with focal
+               of the sorting method in a real measurement proce-                           spots whose displacement exceeds the conventional
+               dure. WebuiltaShack–Hartmannwave-frontsensor                                 limitation.
+               to implementthesortingmethodexperimentally(see                               5.   Conclusion
+               Fig. 6). The main parts of the Shack–Hartmann
+               wave-front sensor include a collimator, lenslet array,                       Wehaveintroducedanewapproachforextendingthe
+               pinhole, relay optics, and CCD camera. It is notice-                         dynamic range of the Shack–Hartmann wave-front
+               able that the pinhole (Melles Griot, 04PPM001) is                            sensor by using software. The sorting method is a
+               inserted between the optics under testing and the                            software-based solution that can be implemented
+               collimator to create a reference wave front, namely, a                       more easily than a hardware-based solution. It over-
+               spherical wavefront. Its diameter is 2 m, which can                         comes the dynamic-range limitation of the conven-
+                                                                                     23
+               create a spherical wave front as large as 0.6 of N.A.                        tionalShack–Hartmannwave-frontsensorbysorting
+               It will be removed when the test wave front is mea-                          each spot in a special sequence. Its mathematical
+               sured.                                                                       developmentispresentedinSection2.Therearetwo
+                  Wechosearectangularlensletarray(AdaptiveOp-                               situations that limit the sorting method: the spot
+               tics Associates, 0300-7.6-S) whose focal length is                           crossing and the row crossing. They are addressed in
+               7.6 mmandsizeis0.3 mm0.3mm.TheCCDcam-                                       Section 3 and used to calculate the maximum
+               era(UniqVision,UP1800)islocatedatthebackfocal                                dynamic-range expansion in several examples. In
+               plane of the lenslet array. Its pixel size is 6.45 m,                       Section4wedemonstratethecapabilityofthesorting
+               and the number of pixels is 1392  1040. The relay                           methodthroughtheactualwave-frontmeasurement.
+               optics (Edmund Industrial Optics, NT45-759) be-                              The sorting method reconstructs the highly aber-
+               tween the lenslet array and the CCD camera relays                            rated wave front and exceeds the dynamic range of
+               focal spots onto the CCD camera. It has a unit mag-                          the conventional Shack–Hartmann wave-front sen-
+               niﬁcation and diffraction-limited performance over                           sor. The optics being tested creates a wave front that
+               the entire ﬁeld of view. It is not necessary that the                        is nonrotational symmetric and highly aberrated.
+               f-numberofthelensletbelargeenoughtoletthefocal                               This demonstration indicates the imminent applica-
+               spots reach the CCD camera.                                                  tion of the sorting method: the highly aberrated
+                                                                                               10 August 2005  Vol. 44, No. 23  APPLIED OPTICS               4843
+                                                                                    its simplicity and robustness. We have described
+                                                                                    the sorting method algorithm and quantiﬁed its
+                                                                                    dynamic-range expansion. Because of these advan-
+                                                                                    tages, it may be successfully applied to the testing of
+                                                                                    uncommon and highly aspherical optics under the
+                                                                                    limitation of the crossing with minimum cost.
+                                                                                       We acknowledge help from Thomas Cathey and
+                                                                                    CDMOptics.WealsothankDavidKessler,Eastman
+                                                                                    KodakCompany,andJohnE.Greivenkamp,Univer-
+                                                                                    sity of Arizona, for thoughtful comments.
+                                                                                       This research was supported by grants from the
+                                                                                    National Science Foundation, ECS-0074578 and
+                                                                                    BES-0086736, and the National Cancer Institute,
+                                                                                    CA091454.
+                                                                                    References
+                                                                                     1. B. C. Platt and R. Shack, “History and principles of Shack–
+                                                                                        Hartmann wave-front sensing,” J. Refract. Surg. 17, s573–
+                                                                                        s577 (2001).
+                                                                                     2. I. Ghozeil, “Hartmann and other screen tests,” in Optical Shop
+                                                                                        Testing, D. Malacara, ed., Wiley Series in Pure and Applied
+                                                                                        Optics (Wiley, 1992), pp. 367–396.
+                                                                                     3. J. W. Hardy, “Adaptive optics: a new technology for the control
+                                                                                        of light,” Proc. IEEE 66, 651–697 (1978).
+                                                                                     4. C. J. Solomon, J. C. Dainty, and N. J. Wooder, “Bayesian
+                                                                                        estimation of atmospherically distorted wave fronts using
+                                                                                        Shack–Hartmann sensor,” Opt. Rev. 2, 217–220 (1995).
+                                                                                     5. J. Liang, B. Grimm, S. Goelz, and J. F. Bille, “Objective mea-
+                                                                                        surementofwaveaberrationsofthehumaneyewiththeuseof
+                                                                                        aHartmann–Shackwave-frontsensor,”J.Opt.Soc.Am.A11,
+                                                                                        1949–1957 (1994).
+                                                                                     6. J. Liang and D. R. Williams, “Aberrations and retinal image
+                                                                                        quality of the normal human eye,” J. Opt. Soc. Am. A 14,
+                                                                                        2873–2883 (1997).
+                                                                                     7. D. L. Fried, “Least-square ﬁtting a wave-front distortion esti-
+                                                                                        mate to an array of phase-difference measurements,” J. Opt.
+                                                                                        Soc. Am. 67, 360–369 (1977).
+                                                                                     8. R. J. Noll, “Phase estimates from slope-type wave-front sen-
+                                                                                        sors,” J. Opt. Soc. Am. 68, 139–140 (1978).
+                                                                                     9. W. H. Southwell, “Wave-front estimation from wave-front
+                                                                                        slope measurement,” J. Opt. Soc. Am. 70, 998–1006 (1980).
+                                                                                    10. J. Hermann, “Least-squares wave-front errors of minimum
+                                                                                        norm,” J. Opt. Soc. Am. 70, 28–35 (1980).
+                                                                                    11. G.H.GolubandC.F.vanLoan,MatrixComputations,2nded.
+              Fig. 7. Spot displacements and the reconstructed wave front of a          (Johns Hopkins U. Press, 1989), Chap. 2, pp. 48–86.
+              cubic phase plate. The patterns show the unique characteristics of    12. W. H. Press, S. A. Teukolsky, W. T. Vetterling, and B. P.
+              the cubic phase plate.                                                                                      
+                                                                                        Flannery, Numerical Recipe in C     , 2nd ed. (Cambridge U.
+                                                                                        Press, 1993), Chap. 2, pp. 35–107.
+                                                                                    13. Å. Bjørk, Numerical Methods for Least Squares Problems, 1st
+              wave-front measurement of unconventional optics                           ed. (Society for Industrial and Applied Mathematics, 1996),
+              that has become more popular nowadays.                                    Chap. 1, pp. 1–36.
+                 It has been found that the sorting method is gen-                  14. H. H. Barrett and K. J. Myers, Foundations of Image Science,
+                                                                                        1st ed. (Wiley, 2003), Chap. 1, pp. 1–62.
+              erally limited by the wave-front curvature in the                     15. J. Pfund, N. Lindlein, and J. Schwider, “Dynamic range ex-
+              mathematical development. This fact is conﬁrmed in                        pansion of a Shack–Hartmann sensor by using a modiﬁed
+              the calculation example that shows that the sorting                       unwrapping algorithm,” Opt. Lett. 23, 995–997 (1998).
+              method performs best in a low-order Zernike polyno-                   16. T. L. Bruno, A. Wirth, and A. J. Jankevics, “Applying Hart-
+              mial. The Shack–Hartmann wave-front sensor built                          mann wavefront-sensing technology to precision optical test-
+              for the demonstration has neither a special conﬁgu-                       ing of the HST correctors,” in Active and Adaptive Optical
+              ration nor an extra component. It is evident that the                     ComponentsandSystemsII,M.A.Ealey,ed.,Proc.SPIE1920,
+              sorting method can be easily adapted to any generic                       328–336 (1993).
+              Shack–Hartmann wave-front sensor by using a rect-                     17. M.C.RoggermannandT.J.Schulz,“Algorithmtoincreasethe
+              angular lenslet array.                                                    largest aberration that can be reconstructed from Hartmann
+                                                                                        sensor measurements,” Appl. Opt. 37, 4321–4329 (1998).
+                 The main advantages of the sorting method are                      18. S. Groening, B. Sick, K. Donner, J. Pfund, N. Lindlein, and J.
+              4844     APPLIED OPTICS  Vol. 44, No. 23  10 August 2005
+                Schwider,   “Wave-front  reconstruction with   a  Shack–     22. J. C. Wyant, “Zernike polynomial,” Optical Science Center,
+                Hartmann sensor with an iterative spline ﬁtting method,”         University of Arizona, Tucson, Arizona, 1999, http://www.
+                Appl. Opt. 39, 561–567 (2000).                                   optics.arizona.edu/jcwyant/Zernikes/ZernikePolynomials.htm.
+             19. N. Lindlein, J. Pfund, and J. Schwider, “Expansion of the   23. G. E. Sommargren, “Phase shifting diffraction interferometry
+                dynamic range of a Shack–Hartmann sensor by using astig-         for measuring extreme ultraviolet optics,” in Extreme Ultravi-
+                matic microlenses,” Opt. Eng. 39, 2220–2225 (2000).              olet Lithography, G. D. Kubiak and D. R. Kania, eds., Vol. 4 of
+             20. N.Lindlein,J.Pfund,andJ.Schwider,“Algorithmforexpand-           OSATrendsinOpticsandPhotonicsSeries(OpticalSocietyof
+                ing the dynamic range of a Shack–Hartmann sensor by using        America, Washington, D.C., 1996), pp. 108–112.
+                aspatiallightmodulatorarray,”Opt.Eng.40,837–840(2001).       24. CDMOptics, Inc., Suite 2110, 4001 Discovery Drive, Boulder,
+             21. G. Rousset, “Wave-front sensing,” in Adaptive Optics for As-    Colo. 80303, http://www.cdm-optics.com.
+                tronomy, D. M. Alloin and J.-M. Mariotti, eds., Vol. 423 of  25. E. R. Dowski and W. T. Cathey, “Extended depth of ﬁeld
+                NATOAdvancedScienceInstitutes Series (Kluwer Academic,           through wave-front coding,” Appl. Opt. 34, 1859–1866
+                1994), pp. 115–138.                                              (1995).
+                                                                                10 August 2005  Vol. 44, No. 23  APPLIED OPTICS    4845

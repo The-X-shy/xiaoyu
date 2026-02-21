@@ -1,0 +1,14 @@
+experiment:
+  name: "exp_missing_spot_no_oracle_quick"
+  seed: 20260210
+  base_config: "configs/base_no_oracle.yaml"
+
+sweep:
+  type: "missing_ratio"
+  missing_ratios: [0.0, 0.1, 0.3, 0.5]
+  pv_levels: [2.0, 5.0, 8.0, 10.0]
+  n_repeats: 5
+
+output:
+  raw_dir: "outputs/raw/missing_spot_no_oracle_quick"
+  table: "outputs/tables/missing_spot_no_oracle_quick_results.csv"

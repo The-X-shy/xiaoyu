@@ -1,0 +1,24 @@
+STAGE_START run_baseline config=configs/exp_dynamic_range_boundary_no_oracle.yaml
+Baseline PV=2.5: success_rate=0.67
+Baseline PV=3.5: success_rate=0.00
+Baseline PV=4.5: success_rate=0.00
+SOLVER=baseline rows=9 out=outputs/tables/dynamic_range_boundary_no_oracle_baseline_results.csv
+STAGE_DONE run_baseline config=configs/exp_dynamic_range_boundary_no_oracle.yaml
+STAGE_START run_asm config=configs/exp_dynamic_range_boundary_no_oracle.yaml
+[1/9] PV=2.5 seed=20260210 OK rmse=0.1117 37.3s (ETA 5.0min)
+[2/9] PV=2.5 seed=20260211 OK rmse=0.1237 24.8s (ETA 3.6min)
+[3/9] PV=2.5 seed=20260212 OK rmse=0.1166 33.8s (ETA 3.2min)
+[4/9] PV=3.5 seed=20260210 FAIL rmse=0.1793 31.1s (ETA 2.6min)
+[5/9] PV=3.5 seed=20260211 FAIL rmse=0.1980 18.6s (ETA 1.9min)
+[6/9] PV=3.5 seed=20260212 FAIL rmse=0.2236 29.4s (ETA 1.5min)
+[7/9] PV=4.5 seed=20260210 FAIL rmse=0.2203 28.6s (ETA 1.0min)
+[8/9] PV=4.5 seed=20260211 FAIL rmse=0.2599 17.0s (ETA 0.5min)
+[9/9] PV=4.5 seed=20260212 FAIL rmse=0.2487 26.5s (ETA 0.0min)
+
+--- Per-PV Summary ---
+ASM PV=2.5: sr=1.00, mean_rmse=0.1173
+ASM PV=3.5: sr=0.00, mean_rmse=nan
+ASM PV=4.5: sr=0.00, mean_rmse=nan
+
+SOLVER=asm rows=9 out=outputs/tables/dynamic_range_boundary_no_oracle_asm_results.csv
+STAGE_DONE run_asm config=configs/exp_dynamic_range_boundary_no_oracle.yaml

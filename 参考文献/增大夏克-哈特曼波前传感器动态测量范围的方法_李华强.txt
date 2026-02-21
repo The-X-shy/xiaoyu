@@ -1,0 +1,306 @@
+   第16卷　第7期
+                                                                                            Vol．16　No．7
+                                           　 光学精密工程
+                    　　　　　　　　
+                                                                      　　　　　　　　
+                                       　Optics and Precision Engineering
+  2008年7月　 　
+                                                                                           　　 Jul．2008
+   文章编号　1004-924X（2008）07-1203-05
+    增大夏克-哈特曼波前传感器动态测量范围的方法
+                                      12          12          1           1
+                              李华强 宋贺伦 饶长辉饶学军
+                  （1．中国科学院光电技术研究所自适应光学实验室四川成都610209；
+                                  2．中国科学院研究生院北京100039）
+   摘要：为了使夏克-哈特曼波前传感器（HS）在具有高灵敏的同时又能获得大的动态测量范围介绍了一种能够增大HS
+   动态测试范围的软件处理方法-外推法。在运用外推法时首先需要找出任意子孔径（A）对应的焦斑位置作为起始点然
+   后利用外推法得到与A相邻的子孔径（B）内的焦斑位置再以B内的焦斑位置作为起始点外推得到与B相邻的其它子
+   孔径内的焦斑位置依次类推直至把所有子孔径内的焦斑全部找到。文中利用实验对外推法的可行性和实用性进行了
+   验证结果表明在超出HS动态测量范围2倍的情况下利用外推法可以完美地复原波面基本解决了HS的动态测量
+   范围和灵敏度相互矛盾的问题。
+   关　键　词：自适应光学；夏克-哈特曼波前传感器；动态范围；外推法；焦斑
+   中图分类号：O439；TP212．14　　文献标识码：A
+                 Extrapolation method to extend dynamic range of
+                            Shack-Hartmann wave-front sensor
+                                12                12                 1                1
+                   LI Hua-qiang    SONG He-lun       RAOChang-hui RAO Xue-jun
+  （1．Adaptive Optical LaboratoryInstitute of Optics and ElectronicsChinese Academy of Sciences
+   ChengDu610209China；2．Graduate School of the Chinese Academy of SciencesBeijing100039China）
+   Abstract： A software-based method called extrapolation method was presented to overcome the trade-
+   off between the sensitivity and the dynamic range of displacement of Shack-Hartmann Wave-front Sen-
+   sor （HS）．Firstlya beginning foca-l spot of a random sub-aperture （A） was obtainedand the foca-l
+   spots of the neighbor sub-apertures （B） on A were found through the extrapolation method．By taking
+   a foca-l spot of B as the beginning pointthe foca-l spots of the neighbor sub-apertures on B could be
+   obtained．In the same waythe other foca-l spots could also be obtained．In order to demonstrate the
+   feasibility and practicability of the extrapolation methodan experiment was carried out．The results
+   show that the extrapolation method can restore the wave-front while the aberration of the incident
+   wave-front is about twice that of dynamic range of HSwhich can satisfy measurement requirements
+   for the large dynamic range and high sensitivity of HS．
+   Key words： adaptive optics；Shack-Hartmann Wave-front Sensor（HS）；dynamic range；extrapolation
+               method；foca-l spot
+   　　收稿日期：2007-11-02；修订日期：2007-12-29．
+   　　基金项目：国家863高技术研究发展计划资助项目
+                                                                                                           第16卷
+                                                                                                                   　
+                                 　　　　　光学　精密工程　　　　　
+    1204
+  1　引　言
+   　　夏克-哈特曼波前传感器（Shack-Hartmann
+   Wave-front Sensor简称 HS）是一种在自适应光
+                               ［1-4］
+   学中常用的波前测量仪器 现在已经广泛应用
+                ［5-6］           ［7］             ［8-9］
+   于光学测量 、天文观测 和眼科科学 等其
+   它领域相对于干涉仪而言HS具有结构简单、
+   实时性强、对工作环境要求低等优点。
+                                                                    图1　夏克-哈特曼波前传感器的工作原理图
+        HS 动态测量范围指的是仪器能够测量到的
+                                                                         Fig．1　Operational principle of HS
+   最大波前起伏其受限于微透镜的f数f数越
+                                                              子孔径上的波前斜率和焦斑偏移量（ΔxΔy）成正
+   小动态范围越大而HS的测量灵敏度越低因
+                                                                      ［12］
+                                                              比关系 由下式给出：
+   此在设计HS时必须在动态范围和测量灵敏度
+   之间权衡迫切需要一种方法在保持HS具有高
+                                                                                   f    ∂W（xy）
+                                                                           Δx＝                     dxdy
+                                                                                   S       ∂x
+                                                                                    ∯
+                                                                                                           （1）
+   测量灵敏度的同时又能获得大的动态测量范围。
+                                                                                   f   ∂W（xy）
+        增大HS动态测量范围的方法可以分为硬件
+                                                                           Δy＝                     dxdy
+                                                                                   S       ∂y
+                                                                                   ∯
+   方法和软件方法两类。相对于硬件方法而言软
+                                                              其中f 为微透镜焦距S为微透镜的面积W 为
+   件方法具有操作灵活、造价低、不需对HS的硬件
+                                                              入射波前。被测波前起伏越剧烈子孔径内光斑
+   结构进行改动等优点因此经常被用来提高HS
+                                                              的偏移量也就越大。对于HS来说只要知道了
+                                 ［10］
+   的动态测量范围。J．Pfund 是最早提出利用软
+                                                              每个子孔径内光斑的偏移量便可以利用不同的数
+   件方法提高HS动态范围的利用反卷积的方法
+                                                              学手段复原出最终的波面。
+   重新建立起焦斑和子孔径的对应关系；Junwon
+                                                                   在传统的HS中通过微透镜的光束必须会
+       ［11］
+   Lee    按坐标位置对焦斑进行排序排列后的焦
+                                                              聚于相应的子孔径内然后利用子孔径内像素点
+   斑就分别对应着各个子孔径这种排序法简单、易
+                                                              的输出计算出焦斑位置和相对于参考点的偏移
+   于实现但需要手工去除那些不参与波面复原的
+                                                              量。HS的动态范围可以用子孔径内所允许的光
+   多余光斑。
+                                                              斑最大偏移量来描述。对于图1中所描述的
+         本文介绍了一种新型的软件处理方法-外推
+                                                                                           ω
+                                                              HS光斑的最大偏移量是
+                                                                                              其中ω为子孔径的
+   法这种方法需要预先知道某个子孔径对应的焦
+                                                                                           2
+   斑然后以此为起始点外推得到其它子孔径对应
+                                                              边长根据式（1）得：
+   的焦斑。本文详细地介绍了外推法增大HS动态
+                                                                           ω f ∂W（xy）
+                                                                              ＝                   dxdy
+                                                                           2 S            ∂x
+   测量范围的工作原理并通过实验验证了这种方
+                                                                                  ∯
+                                                                                                                （2）
+                                                                           ω f ∂W（xy）
+   法的可行性和实用性。
+                                                                              ＝                   dxdy
+                                                                           2 S            ∂y
+                                                                                  ∯
+                                                                   入射波面的起伏比较剧烈时式（2）右边的积
+  2　HS的动态测量范围
+                                                              分项变大导致子孔径内焦斑的偏移量过大超出
+                                                              了HS的动态测量范围此时通过微透镜的光束
+   　　HS的工作原理如图1所示。入射光经微透
+                                                              不再汇聚到对应的子孔径内直接导致了焦斑和
+   镜阵列分割采样后会聚到CCD上每个微透镜都
+                                                              子孔径之间的对应关系不再明确相对于参考点
+   在CCD上限定了一个区域称为子孔径计算出每
+                                                              的偏移量也就不容易得到。外推法就是为了重新
+   个子孔径内的焦斑位置和相对于参考点的偏移
+                                                              找回子孔径和焦斑之间的对应关系而产生的一种
+   量最终利用模式法或区域法复原出最终的波面。
+                                                              软件处理方法。
+    第7期          　　　　
+                         李华强等：增大夏克-哈特曼波前传感器动态测量范围的方法
+                                                                                                 1205
+                                                       成：
+                                                                              2             2
+                                                              min［（X－X ′） ＋（Y－Y ′） ］＝
+                                                                          mn           mn
+  3　外推法工作原理
+                                                                            2                2
+                                                               （X －X ′） ＋（Y －Y ′）  （4）
+                                                                  mn   mn        mn   mn
+                                                       其中（XY）表示所有焦斑的位置坐标
+   　　图2描述了外推法的工作原理。每个子孔
+                                                       （X Y ）表示子孔径（mn）对应的焦斑坐标。
+                                                          mn  mn
+   径参考点的坐标在测量之前就是已知的。子孔径
+                                                       根据式（4）的判断准则可以找到与子孔径（m
+   （ij）对应着的焦斑已知（如图2（1）的‘☆’所
+                                                       n）对应的焦斑（如图2（3）所示）。
+   示）相对于参考点的偏移量用（Δx Δy ）表
+                                      ij    ij
+                                                            完成图2所述的3个步骤后再以子孔径
+   示。
+                                                       （mn）对应的焦斑作为起始点重复上面所述的
+                                                       步骤直至把所有子孔径对应的焦斑找到。由上
+                                                       述可知：外推法就是在已知某个子孔径、焦斑对应
+                                                       关系的情况下寻找出与该子孔径相邻的子孔径
+                                                       对应的焦斑。
+                                                      4　外推法的优缺点
+                                                       　　从上面的分析中可以看出外推法除了具备
+                                                       软件处理方法所具有的造价低、编程灵活等优点
+                                                       外还具有以下优势：（1）外推速度快如果子孔径
+                                                       A 对应的焦斑已知那么与A相邻的子孔径对应
+                                                       的焦斑都可以通过外推法得到；（2）不受多余焦斑
+                                                       的影响所谓的多余焦斑就是指不参与波前复原
+                                                       的焦斑它们是由于微透镜阵列和被测波面在形
+   图2　外推法的工作原理图（‘O’表示参考点‘☆’表示
+                                                       状、大小上的不匹配而造成的；而外推法只寻找参
+         焦斑位置‘＋’表示外推得到的焦斑位置）
+                                                       与复原运算的子孔径对应的焦斑因此多余焦斑
+   Fig．2　 Operational theory of extrapolation method
+                                                       不会对外推法产生影响。
+            （‘O’：reference spot‘☆’：focal spot‘＋’：
+                                                            外推法也存在着一些使用上的限制：（1）外推
+            estimated position）
+                                                       法需要预先知道某个子孔径对应的焦斑二者对
+                                                       应关系的正确与否将直接决定外推法的成败；（2）
+        （mn）表示与（ij）相邻的子孔径。在微透
+                                                       式（4）所述的判断条件决定了外推法的使用是有
+   镜数量很多时位于子孔径（mn）、（ij）上的波
+                                                       一定限制的；把式（1）、（3）代入式（4）得：
+                                                                              2             2
+   面起伏差别很小根据式（1）可知在这种条件下
+                                                              min（（X－X ′） ＋（Y－Y ′） ）＝
+                                                                          mn           mn
+                                                                                           2
+   子孔径（ij）、（mn）对应的焦斑具有大致相等
+                                                                （x   ＋Δx －x －Δx ） ＋
+                                                                   mn    ij   mn    mn
+                                                                                           2
+   的偏移量所以子孔径（mn）对应的焦斑位于
+                                                                （y   ＋Δy －y －Δy ） ＝
+                                                                   mn    ij   mn    mn
+                                                                            2                2
+   （X ′Y ′）附近（在图2（2）用‘＋’表示）
+      mn   mn
+                                                             （Δx －Δx ） ＋（Δy －Δy ） ＝
+                                                                 ij    mn        ij    mn
+                                                              2    x      x  2      y     y  2
+                  X ′＝x ＋Δx
+                    mn    mn     ij
+                                                             f ［（W －W ） ＋（W －W ） ］  （5）
+                                                                   ij    mn       ij   mn
+                                                               x     y
+                  Y ′＝y ＋Δy
+                    mn    mn    ij
+                                                       其中W W 分别是波面xy方向的偏导数
+                                                               ij   ij
+        m∈［i－1i＋1］；　n∈［j－1j＋1］  （3）
+                                                       在子孔径（ij）内的均值。由式（5）可以看出外
+   其中（x y ）表示子孔径（mn）内参考点的
+                                                       推法的适用范围不但受到波面的偏导数的限制
+           mn   mn
+                                                       而且还和波面的曲率有关。
+   坐标。
+       子孔径（mn） 对应的焦斑位置和
+   （X ′Y ′）还会有一定的差距但可以认为在
+      mn   mn
+                                                      5　实验结果
+   所有的焦斑中距离（X ′Y ′）最近的焦斑对
+                          mn   mn
+                                                       　　外推法的可行性可以通过实验得到了验证。
+   应着子孔径（mn）根据式（3）这个判据可以写
+                                                                                                           第16卷
+                                                                                                                   　
+                                 　　　　　光学　精密工程　　　　　
+    1206
+   实验装置如图3所示。实验中的哈特曼波前传感                                      孔径A对应的焦斑已知外推法得到的子孔径、
+   器主要包括：光源（波长λ＝633nm）显微物镜 焦斑的对应关系如图5所示。从点阵的排布来
+   针孔（直径10μm）准直物镜光束匹配系统微                                   看波面具有明显的倾斜去除这些倾斜量复原
+   透镜阵列（20×20微透镜大小：0．14mm×0．14                               出的波面如图6所示很明显离焦像差是最主要
+   mm焦距 f＝4mm）和CCD（像素大小：10μm×                                的成分这就充分验证了外推法的可行性。
+  10μm）。
+              图3　验证外推法可行性的装置图
+     Fig．3　Experimental setup for extrapolation method
+         实验过程包括两部分：（1）标定参考点此时
+   针孔位于准直物镜的焦点上产生的平行光被微
+   透镜聚焦到CCD上根据焦斑质心算法确定子孔
+   径内的光斑位置记录下这些位置坐标作为每个
+   子孔径的参考点；（2）测量波面此时针孔沿光轴
+   方向移动偏离了准直物镜的焦点根据几何光学
+   的观点被测光束将产生离焦像差；针孔偏离准直
+   物镜焦点的距离保证了被测光束的像差超出了哈
+   特曼波前传感器的动态范围。
+        图4是CCD采集到的光斑阵列其中方框代
+   表子孔径很明显位于最右边三列和最上面两行
+   的光斑都已经超出了HS的动态测量范围其中
+   最大的偏移距离接近于2倍的动态范围；并且图
+                                                             6　结　论
+                                                              　　外推法是一种能够增大HS动态测量范围
+                                                              的软件处理方法这种方法只需要预先给定某个
+                                                              子孔径对应的焦斑便可以以此为起点外推得到
+                                                              所有子孔径对应的焦斑。外推法的优点在于不需
+                                                              要对HS做任何硬件方面的改变不需要去除那
+                                                              些不参与运算的光斑点并且外推速度快费用
+                图4　实验中采集到的点阵图
+                                                              低编程灵活。外推法的使用范围主要受限于事
+              Fig．4　Original spot image of HS
+                                                              先给定的子孔径、焦斑对应关系的准确性和被测
+   中很多边缘点并不参与波前复原运算此时若采
+                                                              波面的斜率和曲率（第4节中所述）；其可行性通
+             ［11］
+   用排序法 必须人为地把这些点去掉这样既
+                                                              过实验（第5节所述）得到了验证在超出HS动
+   增大了工作量也有可能把参与运算的点去掉。
+                                                              态测量范围2倍的情况下外推法仍然可以完美
+   使用外推法就可以避免这样的问题。首先指定子
+                                                              地复原出波面。
+   第7期      　　　　
+                 李华强等：增大夏克-哈特曼波前传感器动态测量范围的方法
+                                                                   1207
+  参考文献：
+  ［1］　沈锋姜文汉．夏克-哈特曼波前传感器的波前相位探测误差［J］．光学学报200020（5）：666-671．
+     SHEN FJIANG W H．The measurement error of wavefront phase with Shack-Hartmann wavefront sensor ［J］．
+     Acta Opt．Sin．200020（5）：666-671．（in Chinese）
+  ［2］　PLATT B CSHACK R．History and principles of Shack-Hartmann wave-front sensing ［J］．Ref ract Surg2001
+     17（9）：573-574．
+  ［3］　吴毅王英俭．哈特曼波前探测及波前校正的仿真与误差分析［J］．光学学报199515（4）：473-479．
+     WU YWANG Y J．Simulation and error analysis for Hartmann wavefront sensing and deformable mirror wave-
+     front recovery ［J］．Acta Opt．Sin．199515（4）：473-479．（in Chinese）
+  ［4］　SOUTHWELL W H．Wave-front estimation from wave-front slope measurement ［J］．Opt．Soc．Am．198070
+     （8）：998-1006．
+  ［5］　姜文汉鲜浩杨泽平等．哈特曼波前传感器的应用［J］．量子电子学报199815（2）：228-235．
+     JIANG W HXIAN HYANGZ Petal．．Application of Shack-Hartmann wavefront sensor［J］．Chinese Journal
+     of Quantum Electronics199815（2）：228-235．（in Chinese）
+  ［6］　DANIEL M HDURAN-RAMIREZ V M．Measuring aspheric wavefronts with high accuracy using hartmann text
+     ［J］．SPIE20055776：524-529．
+  ［7］　李新阳姜文汉．湍流大气中哈特曼波前传感器模式波前复原误差［J］．强激光与粒子束200012（2）：149-154．
+     LI X YJIANG W H．Zernike modal wavefront reconstruction of error of Hartmann-Shack wavefront sensor ［J］．
+      High Power Laser and Particle Beams200012（2）：149-154．（in Chinese）
+  ［8］　全薇凌宁王肇圻等．哈特曼传感器测量人眼波像差的特性研究［J］．光电工程200330（3）：1-5．
+     QUAN WLING NWANGZH Qet al．．Property study for Hartmann sensor used in measuring wave aberra-
+     tion of human eye ［J］．Opto-Electronic Engineering200330（3）：1-5．（in Chinese）
+  ［9］　LINDLEIN NPFUND JSCHWIDER J．Expansion of the dynamic range of a Shack-Hartmann sensor by using as-
+     tigmatic micro lenses ［J］．Opt．Eng．200039：2220-2225．
+  ［10］　PFUND JLINDLEIN NSCHWIDER J．Dynamic range expansion of a Shack-Hartmann sensor by use of a modi-
+      fied unwrapping algorithm ［J］．Opt．Lett．199823（13）：995-997．
+  ［11］　JUNWON LSHACK R V．Sorting method to extend the dynamic range of the Shack-Hartmann wave-front sen-
+      sor ［J］．Appl．Opt．200544（23）：835-4845．
+  ［12］　邓罗根．Hartmann-Shack 波前传感器的Fourier光学分析［J］．光学技术1994（2）：16-19．
+      DENG L G．Fourier optics analysis of Hartmann-Shack wavefront sensor ［J］．Optical Technique1994（2）：16-
+      19．（in Chinese）
+  作者简介：李华强（1981－）男山东德州人博士主要从事波前探测方面的研究。E-mail：l＿h＿q＿＠163．com．
+        饶长辉（1972－）男四川成都人研究员主要从事大气湍流校正以及天文成像方面的研究。

@@ -1,0 +1,252 @@
+          Optical Engineering 455, 053605 May 2006
+          Extended-range Shack-Hartmann wavefront
+          sensor with nonlinear holographic lenslet array
+          Dmytro V. Podanchuk                                  Abstract. A nonlinear holographic lenslet array is used to extend the
+          Volodymir P. Dan’ko                                  angular dynamic range of a Shack-Hartmann wavefront sensor. The len-
+          Myhailo M. Kotov                                     slet array has two focal distances deﬁned by the ﬁrst- and second-order
+          National Taras Shevchenko University of Kyiv         diffracted beams. The second-order beam channel is used for prelimi-
+          Radiophysical Department                             nary estimation of the spot position in the ﬁrst-order beam channel. The
+          64, Volodymirska Street                              sensor has an angular dynamic range twice as large as that of a sensor
+          Kyiv, Ukraine, 01033                                 with single-focus lenslets, while retaining the same accuracy. © 2006 So-
+                                                               ciety of Photo-Optical Instrumentation Engineers. DOI: 10.1117/1.2202358
+          Jung-Young Son, FELLOW SPIE                          Subject terms: Shack-Hartmann wavefront sensor; nonlinear holographic lenslet
+          Yong-Jin Choi                                        array; coprocessing; higher diffraction orders; dual focus.
+          Han-Yang University                                  Paper 050307 received Apr. 20, 2005; accepted for publication Sep. 30, 2005;
+          Electronics and Electrical Engineering               published online May 4, 2006.
+             Department
+          Whole Imaging Laboratory
+          Seoul, Korea
+          1 Introduction                                                  2 Nonlinear Holographic Lenslet Array
+          Wavefront measurements ﬁnd wide applications in adaptive        The nonlinear properties of a hologram have been success-
+                                 1,2                                                                              4
+          optics and metrology.     The Shack-Hartmann wavefront          fully used in holographic interferometry. The nonlinear re-
+          sensor is often used for these purposes. It is quite simple     writing of a double-exposure hologram makes the interfero-
+          and convenient for application. The Shack-Hartmann sen-         metric measurement more sensitive. The ability of a
+          sor measures the local slope of a wavefront by reconstruct-     nonlinear hologram to reconstruct the higher-order dif-
+          ing its shape with a special computational procedure.           fracted beams can be used for the fabrication of a holo-
+             Basic elements of the Shack-Hartmann wavefront sensor        graphic lenslet array HLA for a Shack-Hartmann wave-
+          are a lenslet array, and a CCD photodetector located in the     front sensor.
+          focal plane of the lenslets. Every lenslet of the array pro-       Anonlinear HLAis an array consisting of an absorption
+          duces a point image on the photodetector. The shift of each     hologram recorded on a photosensitive material under non-
+          image from its optical axis is directly proportional to the     linear conditions by interfering the reference plane and ob-
+                                                                          jective convergent spherical beams. If the spherical beam is
+          local slope of the wavefront in the corresponding lenslet       focused at a point behind the hologram with coordinates
+          subaperture. The focal length of the lenslets and the small-    b,0,F, then the phase of n’ th-order reconstructed beam,
+          est shift of the image that still can be measured with a                                                                 5
+                                                                          nx,y, is represented by the parabolic approximation as
+          photodetector determine the angular sensitivity of the sen-
+          sor. The maximal measurable angle of the wavefront sensor
+          is directly proportional to the size of the subaperture and               2 n
+          inversely proportional to the focal length of the lenslets.      x,y =       x2 + y2 −2bx.                        1
+          The traditional method of increasing the maximal measur-          n         2F
+          able value of the wavefront slope consists in reducing the
+          focal length of the lenslet array. But this reduction de-       Hence F is the focal length of the microlens deﬁned by the
+          creases the angular sensitivity. This problem can be avoided    ﬁrst-order diffracted beam. For the second-order diffracted
+                                                           3 But re-
+          by using a multifocus holographic lenslet array.                beam n=2, the phase  x,y becomes two times
+          cording this type lenslet array is somewhat cumbersome,                                      2
+          because it requires two object beam channels with different     1x,y. Since the factor 1/2F in 1x,y can be written as
+          focal lengths and separate exposure of each channel. Fur-       1/2F/2 in 2x,y, the second-order diffracted beam is
+          thermore, aligning the channels to get a desired combina-       focused at a distance F/2, i.e., the focal length of the HLA
+          tion of the focal lengths is difﬁcult.                          for the second-order beam is F/2. Hence a HLA with two
+             In this paper, a method of increasing the maximal mea-       spatially separated focal lengths F and F/2 is obtained.
+          surable value of wavefront slope, while maintaining sufﬁ-          The one inherent problem with this nonlinear hologram
+          cient angular sensitivity, by using a dual-focus nonlinear      is that the diffraction efﬁciency is essentially different for
+          holographic lenslet array in a Shack-Hartmann wavefront         different diffraction orders. But this problem can be eased
+          sensor is described.                                            by changing the operating point on the transmittance-
+                                                                          versus-exposure curve of the photomaterial used for record-
+                                                                          ing. The transmittance of the hologram, tE0,E, can be
+          0091-3286/2006/$22.00 © 2006 SPIE                               described by Taylor’s series about operating point E0:
+          Optical Engineering                                      053605-1                                        May 2006/Vol. 455
+   Downloaded From: http://opticalengineering.spiedigitallibrary.org/ on 05/11/2015 Terms of Use: http://spiedl.org/terms
+                                         Podanchuk et al.: Extended-range Shack-Hartmann wavefront sensor¼
+                                                                           Fig. 2 Part of the spot array image in each focal plane of the non-
+                                                                           linear holographic lenslet array: a F1=80 mm, b F2=40 mm.
+           Fig. 1 Experimental setup for recording and investigating nonlinear
+           holographic lenslet array. He-Ne laser, =0.6328 	m; M ,M,M:
+                                                            1   2   3
+           100% mirrors; BS: beamsplitter; L ,L,L,L,L: lenses; NDF:
+                                         1   2  3  4   5                   3 Experimental Setup and Data Processing
+           neutral-density ﬁlter; SM: semitransparent mirror; HLA: nonlinear
+           holographic lenslet array; CCD1, CCD2: CCD area sensors.        The photoplate is developed as a nonlinear HLA and is
+                                                                           used as a sensing element for the Shack-Hartmann wave-
+                                                                           front sensor, which is composed of the same optical setup
+                                                                           for recording but without the object beam channel. The
+                                                                          channel is shut by shutter 2. The HLA forms two images of
+           tE ,E= c En,                                      2      a focal spot array hartmannogram at distances F
+              0           n                                                                                                         1
+                      n−0                                                  =80 mm and F2=40 mm, respectively. The images of the
+           where E is the modulating term and                             spot array are shown in Fig. 2.
+                                                                              The optical axis of the HLA is inclined to the normal to
+                1 ntE                                                   the HLA plane at angles of 1=9.8 deg for the ﬁrst-order
+           c =           .                                      3      diffracted beam and 2=19.6 deg for the second order. The
+            n  n!   En                                                    spot array images are imaged by lenses L4 and L5 on CCD
+                           E0                                              area sensors CCD and CCD , respectively, with demagni-
+                                                                                            1          2
+           The ratio between the diffraction efﬁciencies of the n’th       ﬁcation of 1.5. CCD and CCD have 512582 pixels
+                                                                                                1           2
+           and ﬁrst diffraction orders is                                  each. Signals from the CCDs are digitized by correspond-
+                                                                           ing framegrabbers and processed by a computer. The setup
+                    c        ntE/En                                    allows constructing the sensor with rough smaller focal
+            E= n=                   .                      4      distance and precise larger focal distance measurement
+            n       c       n! tE/E
+                     1                    E0                               channels. Images of the focal spot arrays for both focal
+           It is quite small on the linear section of exposure charac-     distances are coprocessed. The shift in a focal spot is de-
+           teristic, but an order of magnitude greater on the nonlinear    ﬁned as the difference between centroids of the spots in the
+           section. Thus, optimal choice of the operating point allows     experimentally obtained and reference hartmannograms for
+           using high diffraction orders the third or fourth, for ex-     each focal length within the boundary of the respective sub-
+           ample and optimizing the ratio between the diffraction ef-     aperture. The reference hartmannogram of both channels is
+           ﬁciencies of the operating orders. Hence further expansion      produced by directing a plane wave normally to the HLA.
+           of the angular dynamic range of the Shack-Hartmann wave-           The aberration and the noise in the short-focus channel
+           front sensor will be possible.                                  are not substantial, because the channel is used only for
+             Anonlinear HLA has been recorded to work as a dual-           preliminary estimation of the spot position in the precise
+           focus HLAin a laboratory optical setup as shown in Fig. 1.      channel. The spot positions in long-focus channel are esti-
+           Alaser beam is expanded to a diameter of 10 mm by col-          mated from the shifts of spots in the x and y directions,
+           limating optics and then divided into two beams by a beam-      xF2 and yF2, respectively, measured in the short-focus
+           splitter BS. The beam reﬂected from BS is focused on the        channel as follows:
+           surface of mirror M2 by lens L1, and then collimated again                 F                          F
+           by lens L and incident normally on the photoplate as a         ˜      ref   1              ˜     ref    1
+                     2                                                     xF1 = xF1 + F xF2   and   yF1 = yF1 + F yF2,         5
+           reference beam. The transmitted beam from BS is reﬂected                    2                           2
+           90 deg by mirror M3, converged by lens L3, and directed to      where xref and yref are coordinates of corresponding spot in
+           the photoplate by the semitransparent mirror SM with angle             F1       F1
+           of incidence 9.8 deg. This beam is focused at a distance of     the reference hartmannogram in the long-focus channel.
+                                                                                           ˜   ˜
+           80 mm behind the photoplate. It works as the object beam.          The position xF1,yF1 is considered as the center of the
+           Amask with circular aperture located in front of the pho-       subarea in which the precise spot centroid coordinates
+           toplate conﬁnes the incident beams to the diameter of           xF1,yF1 are to be determined. Then the shifts of spot cen-
+           0.5 mm. A microlens array of 97 holographic micro-             ter in the x and y directions—xF1, yF1, respectively—in
+           lenses with diameter 0.5 mm is recorded with shutter 1 by       the precise channel can be easily calculated from the refer-
+           sequentially moving the holographic photoplate in two or-       ence image. This coprocessing allows increasing the maxi-
+           thogonal directions. Nonlinear recording was provided by        mal measured angle to the value deﬁned by the short focus
+           adjusting the visibility of the interference pattern to nearly  while retaining the accuracy deﬁned by the long focus.
+           1 and controlling the exposure and developing times of the         For the reconstruction of the wavefront from the calcu-
+                                                                                                                      1
+           photoplate PFG-01 of Slavich, Russia.                         lated local slope values, the modal method is applied. It
+           Optical Engineering                                      053605-2                                       May 2006/Vol. 455
+   Downloaded From: http://opticalengineering.spiedigitallibrary.org/ on 05/11/2015 Terms of Use: http://spiedl.org/terms
+                                          Podanchuk et al.: Extended-range Shack-Hartmann wavefront sensor¼
+                                                                              Table 1 Angular dynamic range of the Shack-Hartmann wavefront
+                                                                              sensor with nonlinear HLA.
+                                                                                                                  max           D=
+                                                                              Processing              deg         deg       max/
+                                                                              F2=40mm                 0.0014        0.27          193
+                                                                              F1=80mm                 0.0005        0.12          240
+                                                                              Coprocessing            0.0005        0.30          600
+                Fig. 3 Residual error of reconstructed tilted wavefronts.
+                                                                              wavefront reconstruction procedure with the optimum num-
+           enables us to ﬁnd expansion coefﬁcients of the wavefront           ber of the modes yields the minimal residual error. Its in-
+           in the basis of characteristic functions modes.Inthe             crease indicates growth of the measurement error. This in-
+           method, the phase of the wavefront can be expressed as             forms us that the angular dynamic range of the sensor is
+                                                                              exceeded.
+                                 K
+           
+x,y
+ x,y=a g x,y,                                6      4 Results and Discussion
+                       K             k k
+                                k=1                                           Aperformance test of the Shack-Hartmann wavefront sen-
+           where a are expansion coefﬁcients, and g x,y basis func-         sor is carried out by changing the beam incidence angle
+                   k                                  k           6           i.e., the wavefront tilt on the HLA by rotating BS. By
+           tions. The functions used are Zernike polynomials. The             changing the wavefront tilt from 0 to 0.4 deg with a
+           function 
+kx,y in Eq. 6 is an approximation of the real        0.03 deg step, hartmannograms for the two focal lengths
+           wavefront 
+x,y by counting only K modes. In practice,            are taken. The ﬁrst-order Zernike polynomial modes are
+           the wave being measured can be described by small num-             used for reconstructing the wavefront.
+           ber of modes. The quality of the wavefront reconstructed              In Fig. 3 the dependence of the residual error on the
+           from the experimental data is estimated by the residual er-        angle of beam inclination is shown for separate data pro-
+           ror. The error depends on two factors: 1 the number of           cessing curves labeled “40 mm” and “80 mm” and copro-
+           modes considered in Eq. 6, and 2 the random error of           cessing “40+80 mm”. The residual error increases in the
+                                    7 The ﬁnite number of modes leads         small-angle range due to the increasing inﬂuence of the
+           spot position estimation.
+           to projection error, as evident from Eq. 6. The projection       centroid estimation error. The corresponding dependence of
+           error will decrease rapidly to zero when the number of             the ﬁrst-order Zernike coefﬁcient of the reconstructed
+           modes reaches an optimum number K0. The random error               wavefront on the angle of beam inclination is shown in Fig.
+           results from the measurement errors and random noise. It           4. The value of the maximal measurable angle max can be
+           will slowly increase when the number of modes increases.           estimated from these diagrams. The drastic increase in re-
+           The residual error of the reconstructed wavefront is repre-        sidual error as shown in Fig. 2 and the sharp decreases in
+           sented as                                                          the coefﬁcient value in Fig. 3 indicate that the values are
+                                                                              exceeding the maximal measurable angle of the sensor. The
+                    ˜ 2
+           2= u−u1 ,                                              7      angle is speciﬁed in Table 1.
+                  u2                                                           The standard deviation of the spot centroid positions, ,
+                                                                              was estimated by an ensemble of 50 realizations of spot
+                         ˜                                                    array images for each focal distance. Then the smallest shift
+           where u and u1 are the vector representations of the mea-
+           sured shift in a spot centroid and the shift of the spot cal-      of the image that still can be measured with a photodetector
+           culated from the reconstructed wavefront, respectively. The        is deﬁned as 3. From this value, the angular sensitivity
+                             Fig. 4 Reconstructed ﬁrst-order Zernike coefﬁcients in radians: a separate processing of each focal
+                             length and b coprocessing.
+           Optical Engineering                                         053605-3                                          May 2006/Vol. 455
+   Downloaded From: http://opticalengineering.spiedigitallibrary.org/ on 05/11/2015 Terms of Use: http://spiedl.org/terms
+                                              Podanchuk et al.: Extended-range Shack-Hartmann wavefront sensor¼
+                                Fig. 5 Contour maps of the reconstructed wavefront for 0.18-deg-tilted wavefronts. a F2=40 mm,
+                                Z1=48.70 rad, peak to valley 14.74. Contour curves are drawn with 1 interval. b F =80 mm, Z1
+                                 1                                                                                    1            1
+                                =7.89 rad, peak to valley 2.45. Contour curves are drawn with 0.5 interval. c Coprocessing, Z1
+                                =45.78 rad, peak to valley 13.87. Contour curves are drawn with 1 interval.                      1
+             =3x/F for each focal length is calculated. The ob-                 nated during the data processing; thus only second-order
+            tained values and calculated angular dynamic range D of                  aberration was reconstructed. The results of reconstructing
+            the sensor are shown in Table 1. The angular dynamic                     this wavefront are shown in Fig. 6. The contour maps in
+            range of the sensor obtained by coprocessing the two focal               Figs. 6a and 6c are practically identical. The corre-
+            distances 80 and 40 mm of the lenslet array is experimen-              sponding Zernike coefﬁcients, which represent astigmatism
+            tally shown to be more than twice as large as with 80-mm                 and defocus, are speciﬁed in Table 2. The coefﬁcients of the
+            lenslet array alone, while the accuracy of the sensor is pre-            short-focal-distance channel are similar to those in the co-
+            served.                                                                  processing case.
+               In Fig. 5, the result of plane wavefront reconstruction
+            with inclination 0.18 deg is depicted. This angle is within
+            the measurement range of the sensor with focal distance                  5 Conclusions
+            40 mm. In this case, the contour map of the reconstructed
+            wavefront consists of parallel fringes with spatial frequency            It is shown that the nonlinear dual-focus holographic lenslet
+            corresponding to inclination of 0.18 deg, as shown in Fig.               array can make the angular dynamic range of the Shack-
+            5a. For the channel with long focal distance, the recon-               Hartmann sensor more than twice as large as that of the
+            structed wavefront is deformed as shown in Fig. 5b, and                sensor with single-focal lenslets while retaining its accu-
+            hence the incident wavefront cannot be reconstructed.                    racy.
+            However, the coprocessing of both channels F1=80mm                         The nonlinear multifocus holographic lenslet array is
+            and F2=40mm provides a good reconstructed wavefront.                    simple to record, and provides precise and identical forma-
+            The contour maps in Figs. 5a and 5c are practically                  tion of different measurement channels, and the possibility
+            identical.                                                               of adjusting the number of channels and focal-length ratio.
+               TheHLA’sperformanceis also measured with the wave-                    But the decreased diffraction efﬁciency and increased aber-
+            front distorted by second-order aberrations such as defocus              rations and noise during the reconstruction lead to de-
+            and astigmatism. To do this, a complex phase object made                 creased accuracy in the spot position measurements in
+            by overlapping a concave spherical lens and a convex cy-                 higher diffraction orders. However, they do not affect the
+            lindrical lens is located before the HLA. The overall wave-              accuracy in the precise measurement channel. So the wave-
+            front local slopes are within the measurement range of the               front reconstruction accuracy does not depend on them if
+            short-focal-distance channel. The average slope is elimi-                coprocessing is applied. For the fabrication of a nonlinear
+                                Fig. 6 Contour maps of the distorted wavefronts: a F2=40 mm, peak to valley 3.62. Contour curves
+                                are drawn with 0.4 interval. b F1=80 mm, peak to valley 2.9. Contour curves are drawn with 0.4
+                                interval. c Coprocessing, peak to valley 3.48. Contour curves are drawn with 0.4 interval.
+            Optical Engineering                                              053605-4                                               May 2006/Vol. 455
+   Downloaded From: http://opticalengineering.spiedigitallibrary.org/ on 05/11/2015 Terms of Use: http://spiedl.org/terms
+                                                 Podanchuk et al.: Extended-range Shack-Hartmann wavefront sensor¼
+             Table 2 Zernike coefﬁcients Zm estimated for the wavefront shown             Acknowledgments
+             in Fig. 6.                     n
+                                                                                          The authors thank Dr. V. Kurashov of National Taras
+                                                                                          Shevchenko University of Kyiv for useful discussions.
+             Coefﬁ-                                                                       References
+             cient                 Value rad                      Meaning
+                          abc                                                        1. G. Rousset, “Wavefront sensing,” in Adaptive Optics for Astronomy,
+                                                                                               D. M. Alloin and J. M. Mariotti, Eds., pp. 116–137, Kluwer Aca-
+              −2                     26.01                      Astigmatism in                 demic 1994.
+             Z2         −11.04                    −11.16                                   2. C. R. Forest, M. J. Spenko, Y. Sun, M. McGuirk, M. L. Schattenburg,
+                                                               ±45-deg direction               and A. H. Slocum, “Precision assembly and metrology of x-ray foil
+                                                                                               optics,” Proc. SPIE 4851, 538–548 2003.
+             Z0          3.50        −13.92        3.50             Defocus                3. J.-Y. Son, D. V. Podanchuk, V. P. Dan’ko, and K.-D. Kwak, “Shack-
+              2                                                                                Hartmann wavefront sensor with holographic memory,” Opt. Eng.
+              2          9.57         5.67         9.69         Astigmatism in                 4211, 3389–3398 2003.
+             Z2                                                                            4. A. M. Lyalikov, “Enhancement of the measurement sensitivity in
+                                                               horizontal 0-deg              multiple-exposure  holographic  interferometry,”  Opt.  Spectrosc.
+                                                                   or vertical                 931, 136–139 2002.
+                                                               90-deg direction          5. R. J. Collier, C. B. Burckhardt, and L. H. Lin, Optical Holography,
+                                                                                               student ed., Chap. 12, pp. 337–345, Academic Press, New York
+                                                                                               1971.
+                                                                                           6. J. Y. Wang and D. E. Silva, “Wave-front interpretation with Zernike
+                                                                                               polynomials,” Appl. Opt. 19, 1510–1518 1980.
+                                                                                           7. M. V. Kapullo, A. V. Kovalenko, and V. N. Kurashov, “Inﬂuence of
+                                                                                               dimensionality of projection space on optical wavefront reconstruc-
+             holographic lenslet array with higher diffraction efﬁciency                       tion from Hartmann test,” Bull. Univ. Kiev Ser. Phys. Math. 2, 264–
+                                                                                               273 2003.
+             a phase hologram can be used. In this case the line of
+             reasoning does not change in principle.                                      Biographies and photographs of authors not available.
+             Optical Engineering                                                  053605-5                                                 May 2006/Vol. 455
+   Downloaded From: http://opticalengineering.spiedigitallibrary.org/ on 05/11/2015 Terms of Use: http://spiedl.org/terms

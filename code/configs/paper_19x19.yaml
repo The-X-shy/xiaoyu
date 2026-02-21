@@ -1,0 +1,88 @@
+# Paper-faithful SHWS simulation config
+# Based on: Yang et al., 2024
+# MLA: 19x19 grid (361 microlenses), PSO-based wavefront reconstruction
+
+experiment:
+  name: "paper_19x19"
+  seed: 20260210
+
+optics:
+  wavelength_nm: 632.8          # He-Ne laser
+  pitch_um: 150.0               # microlens pitch
+  focal_mm: 5.2                 # MLA-sensor distance (microlens focal length)
+  fill_factor: 1.0              # paper assumes fill factor = 1
+  grid_size: 19                 # 19x19 microlens array
+
+sensor:
+  pixel_um: 5.0                 # 5 μm pixel size
+  width_px: 1024                # 1024 * 5 μm = 5120 μm total
+  height_px: 1024               # MLA extent = 19*150 = 2850 μm; leaves ~1135 μm margin per side
+
+noise:
+  read_sigma: 0.01
+  background: 0.0
+  centroid_noise_px: 0.05
+
+zernike:
+  order: 4                      # (4+1)(4+2)/2 = 15 terms (Noll indices 1..15)
+  n_terms: 15
+  coeff_bound: 1.0              # default bound in waves; see asm_paper for paper bounds
+
+# ---------------------------------------------------------------------------
+# Paper-faithful PSO parameters (Yang et al., 2024)
+# ---------------------------------------------------------------------------
+# NOTE on units: the paper specifies Zernike coefficient bounds in mm.
+#   Our forward model works in "waves" (λ units).  The conversion is:
+#       coeff_waves = coeff_mm * 1000 / wavelength_nm
+#   e.g. 1 mm  ->  1000 / 632.8  ≈ 1.581 waves
+#        0.1 mm ->  100  / 632.8  ≈ 0.158 waves
+#        0.01 mm -> 10   / 632.8  ≈ 0.016 waves
+#   The algorithm should convert these bounds before use.
+# ---------------------------------------------------------------------------
+asm_paper:
+  # --- PSO hyper-parameters ---
+  pso_particles: 100
+  pso_c1: 1.49                  # cognitive acceleration
+  pso_c2: 1.49                  # social acceleration
+  pso_w_start: 0.9              # inertia weight (linearly decreasing)
+  pso_w_end: 0.4
+  pso_max_iter: 400
+  pso_stagnation_limit: 60      # stop if no improvement for this many iters
+  pso_restarts: 7               # multi-restart for reliability at high PV
+
+  # --- termination ---
+  hausdorff_threshold_px: 6.0   # stop when d_H < 6 pixels
+
+  # --- search bounds (in mm, per paper) ---
+  # 15 Zernike terms: [Z1 .. Z6] ±1 mm, [Z7 .. Z10] ±0.1 mm, [Z11 .. Z15] ±0.01 mm
+  bounds_low:  [-1.0, -1.0, -1.0, -1.0, -1.0, -1.0,
+                -0.1, -0.1, -0.1, -0.1,
+                -0.01, -0.01, -0.01, -0.01, -0.01]
+  bounds_high: [ 1.0,  1.0,  1.0,  1.0,  1.0,  1.0,
+                 0.1,  0.1,  0.1,  0.1,
+                 0.01,  0.01,  0.01,  0.01,  0.01]
+  bounds_unit: "mm"             # explicit flag for the algorithm
+
+  # --- forward model grid ---
+  grid_size: 128                # NxN samples for angular-spectrum propagation
+
+  # --- cost function ---
+  duplicate_penalty_weight: 1.0 # weight for duplicate-spot penalty term
+  lambda_reg: 0.0               # no regularization (paper formulation)
+
+baseline:
+  tau_nn_px: 10.0               # nearest-neighbour threshold (pixels)
+  k_fail: 10
+  conflict_ratio_max: 1.0
+  rmse_max: 0.15
+  use_gpu: true
+  require_gpu: true
+  gpu_batch_size: 2048
+  gpu_max_dist_um: null
+  gpu_fallback_to_cpu: true
+
+evaluation:
+  rmse_max_lambda: 0.15         # max acceptable RMS error in waves
+  success_rate_min: 0.95
+  required_range_gain: 14.0
+  n_repeats: 20

@@ -1,0 +1,18 @@
+experiment:
+  name: "exp_param_scan_smoke"
+  seed: 20260210
+  base_config: "configs/base.yaml"
+
+sweep:
+  type: "param_scan"
+  pitch_um_list: [150, 250]
+  focal_mm_list: [4, 8]
+  pv_min: 0.5
+  pv_max: 6.0
+  pv_step: 1.0
+  n_repeats: 1
+  early_stop_on_failure: true
+
+output:
+  raw_dir: "outputs/raw/param_scan_smoke"
+  table: "outputs/tables/param_scan_smoke_results.csv"
